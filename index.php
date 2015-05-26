@@ -1,4 +1,3 @@
-#!/usr/bin/env php
 <?php
 $basePath = getcwd();
 
@@ -19,4 +18,7 @@ if (file_exists("$basePath/vendor/autoload.php")) {
 if (!class_exists('Zend\Loader\AutoloaderFactory')) {
     throw new RuntimeException('Unable to load ZF2. Run `php composer.phar install` or define a ZF2_PATH environment variable.');
 }
-Zend\Mvc\Application::init(require(__DIR__ . '/config/application.config.php'))->run();
+
+$baseConfig = require(__DIR__ . '/config/application.config.php');
+
+Zend\Mvc\Application::init($baseConfig)->run();

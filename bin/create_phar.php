@@ -1,27 +1,29 @@
-#!/usr/bin/env php
 <?php
-$srcRoot = dirname(__DIR__);
-$buildRoot = dirname(__DIR__);
-$filename = 'console.phar';
+define('VERBOSE_MODE', false);
 
-if (file_exists($buildRoot . "/$filename")) {
-    unlink($buildRoot . "/$filename");
+$srcRoot = dirname(__DIR__);
+$buildRoot = __DIR__;
+$filename = 'nlp.phar';
+
+if (file_exists($buildRoot . DIRECTORY_SEPARATOR . $filename)) {
+    unlink($buildRoot . DIRECTORY_SEPARATOR . $filename);
 }
 
-$pharPath = $buildRoot . "/$filename";
+$pharPath = $buildRoot . DIRECTORY_SEPARATOR. $filename;
 $phar = new \Phar($pharPath, 0, $filename);
 $phar->startBuffering();
 
-$phar->addFromString('index.php', substr(php_strip_whitespace("$srcRoot/index.php"), 19));
-addDir($phar, "$srcRoot/module", $srcRoot);
-addDir($phar, "$srcRoot/vendor", $srcRoot);
-addDir($phar, "$srcRoot/config", $srcRoot);
+$phar->addFromString('index.php', php_strip_whitespace($srcRoot . DIRECTORY_SEPARATOR . "index.php"));
+//addFile($phar, $srcRoot . DIRECTORY_SEPARATOR . "index.php", $srcRoot);
+
+addDir($phar, $srcRoot . DIRECTORY_SEPARATOR . "vendor", $srcRoot);
+addDir($phar, $srcRoot . DIRECTORY_SEPARATOR . "config", $srcRoot);
+addDir($phar, $srcRoot . DIRECTORY_SEPARATOR . "module", $srcRoot);
 
 $stub = <<<EOF
-#!/usr/bin/env php
 <?php
-Phar::mapPhar('$filename');
-require 'phar://$filename/index.php';
+Phar::mapPhar("$filename");
+require "phar://$filename/index.php";
 __HALT_COMPILER();
 
 EOF;
@@ -51,6 +53,7 @@ function addDir($phar, $sDir, $baseDir = null) {
 }
 
 function addFile($phar, $sFile, $baseDir = null) {
+    if(VERBOSE_MODE) echo "Adding file $sFile\n";
     if (null !== $baseDir) {
         $phar->addFromString(substr($sFile, strlen($baseDir) + 1), php_strip_whitespace($sFile));
     } else {

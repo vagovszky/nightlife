@@ -17,10 +17,10 @@ class Module implements AutoloaderProviderInterface, ConfigProviderInterface, Co
         $serviceManager = $application->getServiceManager();
         $controllerLoader = $serviceManager->get('ControllerLoader');
         $controllerLoader->addInitializer(function ($instance) use ($serviceManager) {
-                    if (method_exists($instance, 'setEntityManager')) {
-                        $instance->setEntityManager($serviceManager->get('doctrine.entitymanager.orm_default'));
-                    }
-                });
+            if (method_exists($instance, 'setEntityManager')) {
+                $instance->setEntityManager($serviceManager->get('doctrine.entitymanager.orm_default'));
+            }
+        });
     }
 
     public function getConfig() {
@@ -51,6 +51,6 @@ class Module implements AutoloaderProviderInterface, ConfigProviderInterface, Co
     }
 
     public function getModuleDependencies() {
-        return array(); //return array('BetDatabase', 'Import', 'Better');
+        return array(); //return array('OtherModule');
     }
 }
