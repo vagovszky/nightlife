@@ -1,4 +1,16 @@
 <?php
+/**
+ * To bring functionality to standalone phar, You need to follow this structure:
+ * 
+ * config/<someconfigfile>.php
+ * nlp.phar
+ * 
+ * To run phar do: 
+ * php nlp.phar
+ * 
+ * @author Martin Vagovszky
+ */
+
 define('VERBOSE_MODE', false);
 
 $srcRoot = dirname(__DIR__);
@@ -14,10 +26,8 @@ $phar = new \Phar($pharPath, 0, $filename);
 $phar->startBuffering();
 
 $phar->addFromString('index.php', php_strip_whitespace($srcRoot . DIRECTORY_SEPARATOR . "index.php"));
-//addFile($phar, $srcRoot . DIRECTORY_SEPARATOR . "index.php", $srcRoot);
 
 addDir($phar, $srcRoot . DIRECTORY_SEPARATOR . "vendor", $srcRoot);
-addDir($phar, $srcRoot . DIRECTORY_SEPARATOR . "config", $srcRoot);
 addDir($phar, $srcRoot . DIRECTORY_SEPARATOR . "module", $srcRoot);
 
 $stub = <<<EOF
