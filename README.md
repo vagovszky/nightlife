@@ -2,11 +2,11 @@
 
 ## Objective
 
-1) Download & parse the html content **(in progress)**
-2) Store parsed data to DB (optional)
-3) Populate a XML (to be specified)
-4) Expose the XML file
-5) Usage, tuning, deployment, terms of use
+1. Download & parse the html content **(in progress)**
+2. Store parsed data to DB (optional)
+3. Populate a XML (to be specified)
+4. Expose the XML file
+5. Usage, tuning, deployment, terms of use
 
 For deployment we are going to use phar archive (whole project in one file)
 - **bin/create_phar.php**
@@ -60,10 +60,13 @@ Note: All the code will be programmed in PHP
 
 - for kick off - MySQL
 - Use Entities defined in **module/Application/src/Entity**
+- Two tables:
+    - **events-list** _The list of events_
+    - **events-details** _Details about each event from the events-list_
 
 #### 3) Populate a XML (to be specified)
 
-I need the documentation
+I need the documentation (later)
 
 #### 4) Expose the XML file
 
@@ -93,16 +96,16 @@ TBD (GNU/GPL?)
 
 ## Instalation / compilation / usage
 
-1) Install dependencies
+1. Install dependencies
     - php composer.phar install
-2) Setup configuration (db connection etc.)
+2. Setup configuration (db connection etc.)
     - nano config/local.php
-3) Install the database schema
+3. Install the database schema
     - php index.php orm:schema-tool:create
-4) Compile into package (optional)
+4. Compile into package (optional)
     - php bin/create.phar
-5) Deploy package
+5. Deploy package
     - cp bin/nlp.phar <destination>
     - cp -R config <destination>
-6) Usage
+6. Usage
     - php index.php or php <destination>/nlp.phar
