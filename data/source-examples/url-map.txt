@@ -1,0 +1,3 @@
+event-list.html http://www.the-night-life.cz/udalosti?filter[city]=Brno&count=100
+event-001.html  http://www.the-night-life.cz/jazzova-legenda-jaromir-hnilicka-hostejam-session-3
+event-002.html  http://www.the-night-life.cz/podniky?action=detail-event&id=1210
