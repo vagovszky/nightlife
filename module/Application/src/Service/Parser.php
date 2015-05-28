@@ -73,10 +73,10 @@ class Parser implements ParserInterface, LoggerAwareInterface  {
             $datetime = explode("<br />", trim($detailContent->find('.right_side .main .title .info .item')[1]->find('span')->innerHtml)); // date + time
             $address = explode("<br />", trim($detailContent->find('.left_side .contact .left_s .address')->innerHtml)); // street + city
             
-            $event->date = trim($datetime[0]);
-            $event->time = trim($datetime[1]);
-            $event->street = trim($address[0]);
-            $event->city = trim($address[1]);
+            $event->date = (isset($datetime[0])) ? trim($datetime[0]) : '';
+            $event->time = (isset($datetime[1])) ? trim($datetime[1]) : '';
+            $event->street = (isset($address[0])) ? trim($address[0]) : '';
+            $event->city = (isset($address[0])) ? trim($address[0]) : '';
     
             var_dump($event);
             
