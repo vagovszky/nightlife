@@ -15,8 +15,8 @@ class ParserFactory implements FactoryInterface {
         $logger = $serviceLocator->get('Application\Logger');
         
         $parser = new Parser($em, $dom);
-        $parser->setBaseUrl($config['sources']['base_url']);
-        $parser->setListUrl($config['sources']['list_url']);
+        $parser->setBaseUrl($config['sources']['baseUrl']);
+        $parser->setListUrl($config['sources']['listUrl']);
         $parser->setLogger($logger);
         
         return $parser;

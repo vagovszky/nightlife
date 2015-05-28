@@ -6,9 +6,9 @@ interface ParserInterface {
     
     public function parse();
     
-    public function setBasUrl($base_url);
+    public function setBaseUrl($baseUrl);
     
-    public function setListUrl($list_url);
+    public function setListUrl($listUrl);
     
 }
 

@@ -14,8 +14,8 @@ class Parser implements ParserInterface, LoggerAwareInterface  {
     protected $em;
     private $dom;
     
-    private $base_url;
-    private $list_url;
+    private $baseUrl;
+    private $listUrl;
     private $logger;
     
     const PARSER_ENTITY = 'Application\Entity\Event';
@@ -25,13 +25,13 @@ class Parser implements ParserInterface, LoggerAwareInterface  {
         $this->dom = $dom;
     }
     
-    public function setBasUrl($base_url){
-        $this->base_url = $base_url;
+    public function setBaseUrl($baseUrl){
+        $this->baseUrl = $baseUrl;
         return $this;
     }
     
-    public function setListUrl($list_url){
-        $this->list_url = $list_url;
+    public function setListUrl($listUrl){
+        $this->listUrl = $listUrl;
         return $this;
     }
     
@@ -43,14 +43,52 @@ class Parser implements ParserInterface, LoggerAwareInterface  {
     public function parse(){
         $this->truncateTable();
         foreach($this->getUrlList() as $url){
-            $fullUrlDecoded = $this->base_url.rawurldecode($url);
+            $fullUrlDecoded = $this->prepareUrl($url);
             $this->parseDetail($fullUrlDecoded);
         }
     }
     
     private function parseDetail($url){
-        
+        $this->logger->log(Logger::INFO, "Parsing url: ".$url);
+        try{
+            $this->dom->load($url);
+            $detailContent = $this->dom->find('body .site_wrap #site_content .content_subpage .detail .part_head');
+                        
+            // ---------------------------
+            $event = new \stdClass;
+            $event->img_big_url = $this->prepareUrl(trim($detailContent->find('.left_side .image a')->getAttribute('href')));
+            $event->img_url = $this->prepareUrl(trim($detailContent->find('.left_side .image a img')->getAttribute('src')));
+            $event->title = trim($detailContent->find('.right_side .main .title h1')->text);
+            $event->email = trim($detailContent->find('.left_side .contact .left_s .email')->text);
+            $event->url_web = trim($detailContent->find('.left_side .contact .left_s .web a')->getAttribute('href'));
+            $event->phone = trim($detailContent->find('.left_side .contact .right_s .phone')->text);
+            $event->map_iframe_url = trim($detailContent->find('.left_side .map iframe')->getAttribute('src'));
+            $event->place_url_detail = $this->prepareUrl(trim($detailContent->find('.right_side .main .title .info .item')[0]->find('span a')->getAttribute('href')));
+            $event->place = trim($detailContent->find('.right_side .main .title .info .item')[0]->find('span a')->text);
+            $event->entry_amount = trim($detailContent->find('.right_side .main .title .info .item')[2]->find('span')->text);
+            $event->description = trim($detailContent->find('.right_side .main .desc')->innerHtml);
+            $event->drink_list_url = trim($detailContent->find('.right_side .main .foot a')->getAttribute('href'));
+            $event->social_url = trim($detailContent->find('.right_side .main .foot .social a')->getAttribute('href'));
+            
+            $datetime = explode("<br />", trim($detailContent->find('.right_side .main .title .info .item')[1]->find('span')->innerHtml)); // date + time
+            $address = explode("<br />", trim($detailContent->find('.left_side .contact .left_s .address')->innerHtml)); // street + city
+            
+            $event->date = trim($datetime[0]);
+            $event->time = trim($datetime[1]);
+            $event->street = trim($address[0]);
+            $event->city = trim($address[1]);
+    
+            var_dump($event);
+            
+            // ---------------------------
+            
+        }catch(\Exception $e){
+            $this->logger->log(Logger::ALERT, "Error while loading the list of events: ".$e->getMessage());
+            throw new ParserException("Error while loading the list of events: ".$e->getMessage());
+        }
     }
+    
+    
     
     public function truncateTable(){
         $this->logger->log(Logger::INFO, "Truncating events table...");
@@ -74,9 +112,9 @@ class Parser implements ParserInterface, LoggerAwareInterface  {
     
     private function getUrlList(){
         $urls = array();
-        $this->logger->log(Logger::INFO, "Loading list of events from ".$this->list_url);
+        $this->logger->log(Logger::INFO, "Loading list of events from url: ".$this->listUrl);
         try{
-            $this->dom->load($this->list_url);
+            $this->dom->load($this->listUrl);
             $items = $this->dom->find('.content div .clubs_list .item .texts .column_left h2 a'); // The Detail URL selector
         }catch(\Exception $e){
             $this->logger->log(Logger::ALERT, "Error while loading the list of events: ".$e->getMessage());
@@ -86,6 +124,11 @@ class Parser implements ParserInterface, LoggerAwareInterface  {
             $urls[] = $item->getAttribute('href');
         }
         return $urls;
+    }
+    
+    private function prepareUrl($url){
+        $decodedUrl = html_entity_decode(rawurldecode($url));
+        return $this->baseUrl.$decodedUrl;
     }
     
 }

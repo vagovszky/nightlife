@@ -10,12 +10,12 @@ return array(
     'console' => array(
         'router' => array(
             'routes' => array(
-                'default' => array(
+                'parse' => array(
                     'options' => array(
-                        'route' => 'default',
+                        'route' => 'parse',
                         'defaults' => array(
                             'controller' => 'Application\Controller\Index',
-                            'action' => 'default'
+                            'action' => 'parse'
                         )
                     )
                 ),
@@ -48,8 +48,8 @@ return array(
         ),
     ),
     'sources' => array(
-        'base_url' => 'http://www.the-night-life.cz',
-        'list_url' => 'http://www.the-night-life.cz/udalosti?filter[city]=Brno&count=100'
+        'baseUrl' => 'http://www.the-night-life.cz',
+        'listUrl' => 'http://www.the-night-life.cz/udalosti?filter[city]=Brno&count=10'
     ),
     'log' => array(
         'Application\Logger' => array(

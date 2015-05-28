@@ -23,7 +23,7 @@ class Module implements ConfigProviderInterface, ConsoleUsageProviderInterface, 
 
     public function getConsoleUsage(Console $console) {
         return array(
-            "default" => "Default action",
+            "parse" => "Save to database",
         );
     }
 

@@ -12,12 +12,12 @@ class IndexController extends AbstractActionController {
         return $this->getServiceLocator()->get('console');
     }
     
-    public function defaultAction(){
+    public function parseAction(){
         $console = $this->getConsole();
         if ($console instanceof Virtual) {
             return "No console support !!!";
         }
-        //$console->write("Default action".PHP_EOL);
+        $this->getServiceLocator()->get('Application\Service\Parser')->parse();
     }
 
 }
