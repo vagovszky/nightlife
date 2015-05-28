@@ -1,3420 +1,661 @@
 <!DOCTYPE HTML>
 <html>
-<head>
-	<meta charset="utf-8" />
-	<title>Události - The Night Life</title>
-	<meta name="description" content="Události" />
-	<meta name="keywords" content="Události" />
-	<meta name="author" content="4every1 s.r.o." />
-	<meta name="robots" content="index, follow" />
-    <meta name="google-site-verification" content="ziwmMzfP2m1Op3Lum49C5PcOvxz7Bxn4xTJ_ZvYVpdk" />
-    
-    <meta name="viewport" content="width=device-width" />
-	    
-	<link rel="shortcut icon" href="/layout/img/favicon.ico" type="image/x-icon" />
-    
-    
-	
-												
-	<link rel="stylesheet" type="text/css" media="screen" href="/layout/css/fonts.css" />
-	<link rel="stylesheet" type="text/css" media="screen" href="/layout/css/main.css" />
-			<link rel="stylesheet" type="text/css" media="screen" href="/layout/css/theme.css" />
-	
-	
+    <head>
+        <meta charset="utf-8" />
+        <title>Události - The Night Life</title>
+        <meta name="description" content="Události" />
+        <meta name="keywords" content="Události" />
+        <meta name="author" content="4every1 s.r.o." />
+        <meta name="robots" content="index, follow" />
+        <meta name="google-site-verification" content="ziwmMzfP2m1Op3Lum49C5PcOvxz7Bxn4xTJ_ZvYVpdk" />
 
-			<!-- Mootools -->
-							<script src="/engine/js/MooTools/mootools-1.4.5.core.js" type="text/javascript"></script>
-			<script src="/engine/js/MooTools/mootools-1.4.5.more.js" type="text/javascript"></script>
-		
-		<!-- UI -->
-								<script type="text/javascript" src="/engine/js/MooTools/4Moo1/UI/PopUpHTML.js "></script>
+        <meta name="viewport" content="width=device-width" />
 
-						<script src="/engine/js/MooTools/_ui/_ui.js" type="text/javascript"></script>
-			<script src="/engine/js/MooTools/_ui/_ui.Loading.js" type="text/javascript"></script>
-			<script src="/engine/js/MooTools/_ui/_ui.ImagePreloader.js" type="text/javascript"></script>
-			<script src="/engine/js/MooTools/_ui/_ui.ContentToggler.js" type="text/javascript"></script>
-			<script src="/engine/js/MooTools/_ui/_ui.TabView.js" type="text/javascript"></script>
+        <link rel="shortcut icon" href="/layout/img/favicon.ico" type="image/x-icon" />
 
 
-			<script src="/engine/js/MooTools/_ui/_ui.AjaxLoad.js" type="text/javascript"></script>			<script src="/engine/js/MooTools/_ui/_ui.AjaxLoad.PopupHtml.js" type="text/javascript"></script>			
-			<script src="/engine/js/MooTools/_ui/_ui.Slider.js" type="text/javascript"></script>			<script src="/engine/js/MooTools/_ui/_ui.Sliders.js" type="text/javascript"></script>
-			
-			
-			<script src="/engine/js/MooTools/_ui/_ui.SlideshowSwipe.js" type="text/javascript"></script>
-			<script src="/engine/js/MooTools/_ui/_ui.Slideshow.js" type="text/javascript"></script>
 
-		
-					<script type="text/javascript" src="/libs/mt_placeholder/placeholder-min.js"></script>
 
-			<script type="text/javascript">
-			    $(window).addEvent('domready', function()
-				{
-			        new NS.Placeholder(
-					{
-			            cssClass: 'with_placeholder'
-			        });
-			    });
-			</script>
-		
-					<script type="text/javascript" src="/libs/cerabox/cerabox.min.js "></script>
-			<link rel="stylesheet" type="text/css" media="screen" href="/libs/cerabox/style/cerabox.css" />
-		
-		
-					<script type="text/javascript" src="/engine/js/MooTools/_fv.js "></script>
+        <link rel="stylesheet" type="text/css" media="screen" href="/layout/css/fonts.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="/layout/css/main.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="/layout/css/theme.css" />
 
-			<script type="text/javascript">//<![CDATA[
-				_fvSetString(FV_ERROR_REQUIRED, 'Povinná položka');
-				_fvSetString(FV_ERROR_MIN, 'Nedostatečný počet znaků (min. %d)');
-				_fvSetString(FV_ERROR_MAX, 'Příliš mnoho znaků (max. %d)');
-				_fvSetString(FV_ERROR_NUMERIC, 'Pole může obsahovat pouze číslice');
-				_fvSetString(FV_ERROR_ALPHA, 'Pole může obsahovat pouze znaky');
-				_fvSetString(FV_ERROR_PATTERN, 'Nesprávný tvar');
-				_fvSetString(FV_ERROR_EQUALWITH, 'Hodnoty se neshodují');
-				_fvSetString(FV_ERROR_AJAX, 'Nesprávná hodnota');
-				_fvSetString(FV_ERROR_MINVALUE, 'Hodnota je menší než povolená hodnota %d');
-				_fvSetString(FV_ERROR_MAXVALUE, 'Hodnota je větší než povolená hodnota %d');
 
-				_fvSetString(FV_ERROR_PHONE, 'Nesprávný tvar telefonu');
-				_fvSetString(FV_ERROR_DATE, 'Nesprávný tvar datumu');
-				_fvSetString(FV_ERROR_URL, 'Nesprávný tvar adresy');
-				_fvSetString(FV_ERROR_EMAIL, 'Nesprávný tvar emailu');
-			//]]></script>
-				
-		<script type="text/javascript" src="/engine/js/MooTools/4Moo1/UI/SuggestionHTML.js "></script>
-		
-		<script type="text/javascript" src="/engine/js/MooTools/UIScrollBar.js "></script>
-		<link rel="stylesheet" type="text/css" media="screen" href="/layout/css/_ui/ui-scrollbar.css" />
-		
-		<link rel="stylesheet" type="text/css" media="screen" href="/libs/formular/Formular.css" />		
-		<script type="text/javascript" src="/libs/formular/Formular.js "></script>
-	
-	<script type="text/javascript" src="/engine/js/init.js"></script>
 
-	
-    
-            <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        
-          ga('create', 'UA-53603229-1', 'auto');
-          ga('send', 'pageview');
-        
+        <!-- Mootools -->
+        <script src="/engine/js/MooTools/mootools-1.4.5.core.js" type="text/javascript"></script>
+        <script src="/engine/js/MooTools/mootools-1.4.5.more.js" type="text/javascript"></script>
+
+        <!-- UI -->
+        <script type="text/javascript" src="/engine/js/MooTools/4Moo1/UI/PopUpHTML.js "></script>
+
+        <script src="/engine/js/MooTools/_ui/_ui.js" type="text/javascript"></script>
+        <script src="/engine/js/MooTools/_ui/_ui.Loading.js" type="text/javascript"></script>
+        <script src="/engine/js/MooTools/_ui/_ui.ImagePreloader.js" type="text/javascript"></script>
+        <script src="/engine/js/MooTools/_ui/_ui.ContentToggler.js" type="text/javascript"></script>
+        <script src="/engine/js/MooTools/_ui/_ui.TabView.js" type="text/javascript"></script>
+
+
+        <script src="/engine/js/MooTools/_ui/_ui.AjaxLoad.js" type="text/javascript"></script>			<script src="/engine/js/MooTools/_ui/_ui.AjaxLoad.PopupHtml.js" type="text/javascript"></script>			
+        <script src="/engine/js/MooTools/_ui/_ui.Slider.js" type="text/javascript"></script>			<script src="/engine/js/MooTools/_ui/_ui.Sliders.js" type="text/javascript"></script>
+
+
+        <script src="/engine/js/MooTools/_ui/_ui.SlideshowSwipe.js" type="text/javascript"></script>
+        <script src="/engine/js/MooTools/_ui/_ui.Slideshow.js" type="text/javascript"></script>
+
+
+        <script type="text/javascript" src="/libs/mt_placeholder/placeholder-min.js"></script>
+
+        <script type="text/javascript">
+            $(window).addEvent('domready', function ()
+            {
+                new NS.Placeholder(
+                        {
+                            cssClass: 'with_placeholder'
+                        });
+            });
+        </script>
+
+        <script type="text/javascript" src="/libs/cerabox/cerabox.min.js "></script>
+        <link rel="stylesheet" type="text/css" media="screen" href="/libs/cerabox/style/cerabox.css" />
+
+
+        <script type="text/javascript" src="/engine/js/MooTools/_fv.js "></script>
+
+        <script type="text/javascript">//<![CDATA[
+            _fvSetString(FV_ERROR_REQUIRED, 'Povinná položka');
+            _fvSetString(FV_ERROR_MIN, 'Nedostatečný počet znaků (min. %d)');
+            _fvSetString(FV_ERROR_MAX, 'Příliš mnoho znaků (max. %d)');
+            _fvSetString(FV_ERROR_NUMERIC, 'Pole může obsahovat pouze číslice');
+            _fvSetString(FV_ERROR_ALPHA, 'Pole může obsahovat pouze znaky');
+            _fvSetString(FV_ERROR_PATTERN, 'Nesprávný tvar');
+            _fvSetString(FV_ERROR_EQUALWITH, 'Hodnoty se neshodují');
+            _fvSetString(FV_ERROR_AJAX, 'Nesprávná hodnota');
+            _fvSetString(FV_ERROR_MINVALUE, 'Hodnota je menší než povolená hodnota %d');
+            _fvSetString(FV_ERROR_MAXVALUE, 'Hodnota je větší než povolená hodnota %d');
+
+            _fvSetString(FV_ERROR_PHONE, 'Nesprávný tvar telefonu');
+            _fvSetString(FV_ERROR_DATE, 'Nesprávný tvar datumu');
+            _fvSetString(FV_ERROR_URL, 'Nesprávný tvar adresy');
+            _fvSetString(FV_ERROR_EMAIL, 'Nesprávný tvar emailu');
+                            //]]></script>
+
+        <script type="text/javascript" src="/engine/js/MooTools/4Moo1/UI/SuggestionHTML.js "></script>
+
+        <script type="text/javascript" src="/engine/js/MooTools/UIScrollBar.js "></script>
+        <link rel="stylesheet" type="text/css" media="screen" href="/layout/css/_ui/ui-scrollbar.css" />
+
+        <link rel="stylesheet" type="text/css" media="screen" href="/libs/formular/Formular.css" />		
+        <script type="text/javascript" src="/libs/formular/Formular.js "></script>
+
+        <script type="text/javascript" src="/engine/js/init.js"></script>
+
+
+
+        <script>
+                        (function (i, s, o, g, r, a, m) {
+                            i['GoogleAnalyticsObject'] = r;
+                            i[r] = i[r] || function () {
+                                (i[r].q = i[r].q || []).push(arguments)
+                            }, i[r].l = 1 * new Date();
+                            a = s.createElement(o),
+                                    m = s.getElementsByTagName(o)[0];
+                            a.async = 1;
+                            a.src = g;
+                            m.parentNode.insertBefore(a, m)
+                        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+                        ga('create', 'UA-53603229-1', 'auto');
+                        ga('send', 'pageview');
+
         </script>
     </head>
-<body>
+    <body>
 
 
 
 
-	<div id="site_lines_wrap">
-		<div id="timestamp">
-		<span class="date" id="clockDate">27/05/2015</span><br />
-		<span class="time" id="clockTime">20<span id="blick" style="visibility:visible;">:</span>33</span>
-	</div>
-	</div>
-<div class="site_wrap">
-	
-	<div id="site_header">
-		<a href="/" title="The Night Life">
-			<h1 class="hide">Web o nočním životě v Brně</h1>
-			<span class="beta">BETA</span>
-			<img src="/layout/img/theme/logo.png" alt="logo" class="logo" />
-		</a>
-		<div class="brno"></div>
-		<div class="inside">
-							<div class="articlescat0 sidebox box1">
-		<ul>
-				<li class="item1 "><a href="/">Domů</a></li>
-			<li class="item2 "><a href="/podniky">Podniky</a></li>
-			<li class="item3 active"><a href="/udalosti">Události</a></li>
-			<li class="item4 "><a href="/sluzby">Služby</a></li>
-			<li class="item5 "><a href="/nightzone">NightZone</a></li>
-			<li class="item6 "><a href="/aktuality">Aktuality</a></li>
-			<li class="item7 "><a href="/partneri">Partneři</a></li>
-			<li class="item8 "><a href="/kontakt">Kontakt</a></li>
-		</ul>
-</div><div class="sidebox newssign box2">
-	<div class="inside">
-		<form method="post" action="">
-			<input type="hidden" name="newssign" value="1" />
-			<label class="makeOver" for="newssignEmail">Newsletter:</label>
-			<input id="newssignEmail" class="text" type="text" name="email" placeholder="Váš e-mail" />
-			<input class="submit button" type="submit" value="Odeslat" />
-		</form>		
-	</div>
-</div>
-			
-		</div>
+        <div id="site_lines_wrap">
+            <div id="timestamp">
+                <span class="date" id="clockDate">27/05/2015</span><br />
+                <span class="time" id="clockTime">20<span id="blick" style="visibility:visible;">:</span>33</span>
+            </div>
+        </div>
+        <div class="site_wrap">
+
+            <div id="site_header">
+                <a href="/" title="The Night Life">
+                    <h1 class="hide">Web o nočním životě v Brně</h1>
+                    <span class="beta">BETA</span>
+                    <img src="/layout/img/theme/logo.png" alt="logo" class="logo" />
+                </a>
+                <div class="brno"></div>
+                <div class="inside">
+                    <div class="articlescat0 sidebox box1">
+                        <ul>
+                            <li class="item1 "><a href="/">Domů</a></li>
+                            <li class="item2 "><a href="/podniky">Podniky</a></li>
+                            <li class="item3 active"><a href="/udalosti">Události</a></li>
+                            <li class="item4 "><a href="/sluzby">Služby</a></li>
+                            <li class="item5 "><a href="/nightzone">NightZone</a></li>
+                            <li class="item6 "><a href="/aktuality">Aktuality</a></li>
+                            <li class="item7 "><a href="/partneri">Partneři</a></li>
+                            <li class="item8 "><a href="/kontakt">Kontakt</a></li>
+                        </ul>
+                    </div><div class="sidebox newssign box2">
+                        <div class="inside">
+                            <form method="post" action="">
+                                <input type="hidden" name="newssign" value="1" />
+                                <label class="makeOver" for="newssignEmail">Newsletter:</label>
+                                <input id="newssignEmail" class="text" type="text" name="email" placeholder="Váš e-mail" />
+                                <input class="submit button" type="submit" value="Odeslat" />
+                            </form>		
+                        </div>
+                    </div>
+
+                </div>
 
 
-	</div>
-		
-	
-		<div id="site_search">
-		<div class="inside">
-							<div class="sidebox search box3">
-	<div class="inside">
-		<form method="post" action="/vyhledavani">
-			<div class="ui-item-fulltext">
-				<input class="text" type="text" name="seastr" value="" autocomplete="off" placeholder="Výraz k vyhledání" />
-			</div>
-			<button type="submit" class="submit">Hledat</button>
-		</form>
-	</div>
-</div>
+            </div>
 
-	<script type="text/javascript">//<![CDATA[
-		window.addEvent('domready', function(){
-			var ld = new Element('div');
-			ld.adopt(new Element('img', {'src': '/layout/img/ui/loading.suggestion.gif'}));
-			ld.adopt(new Element('div', {'class': 'text', html: 'Probíhá načítání výsledků, <br/>čekejte prosím.'}));
 
-			var elISearch;
-			if(elISearch = $(document).getElement('.sidebox.search input[name=seastr]'))
-			{
-				new SuggestionHTML(elISearch,
-				{
-					'url': '/vyhledavani',
-					'imgLoadingSrc': '/layout/img/ui/loading.suggestion.gif',
-					useLoadingBox: true,
-					loadingElement: ld
-				});
-			}
-		});
-	//]]></script>
-					</div>
-	</div>
-	<div id="site_content">
-				<div id="left_banner">
-							<div class="sidebox banner box12">
-	<div class="inside">
-																	<img src="/data/imgauto/2/0/Banner.png" alt="" />				</div>
-</div>					</div>
-		<div id="right_banner">
-							<div class="sidebox banner box12">
-	<div class="inside">
-																	<img src="/data/imgauto/2/0/Banner.png" alt="" />				</div>
-</div>					</div>
-		
-									<div class="content_subpage">
-						<div id="clubs" class="list events">
-		<div class="right_sidebar left_sidebar">
-							<div class="sidebox top_events box16">
+            <div id="site_search">
+                <div class="inside">
+                    <div class="sidebox search box3">
+                        <div class="inside">
+                            <form method="post" action="/vyhledavani">
+                                <div class="ui-item-fulltext">
+                                    <input class="text" type="text" name="seastr" value="" autocomplete="off" placeholder="Výraz k vyhledání" />
+                                </div>
+                                <button type="submit" class="submit">Hledat</button>
+                            </form>
+                        </div>
+                    </div>
 
-	<h2>Top události</h2>
-	<div class="inside">
-																<div class="item number1">
-					<h3><strong>06/06/2015 18:00</strong> <a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1172">HOUSE 4 U BOAT FIREWORKS EDITION</a></h3>
-					<div class="desc">
-						SPECIÁLNÍ EDICE HOUSE 4 U BOAT V RÁMCI OHŇOSTROJŮ IGNIS BRUNENSIS!
+                    <script type="text/javascript">//<![CDATA[
+                        window.addEvent('domready', function () {
+                            var ld = new Element('div');
+                            ld.adopt(new Element('img', {'src': '/layout/img/ui/loading.suggestion.gif'}));
+                            ld.adopt(new Element('div', {'class': 'text', html: 'Probíhá načítání výsledků, <br/>čekejte prosím.'}));
 
-OMEZENÁ KAPACITA!!<br />
-						<strong>Tabarin</strong>
-					</div>
-				</div>
-			
-			<a href="/udalosti" class="more">
-				Další události			</a>
-			</div>
+                            var elISearch;
+                            if (elISearch = $(document).getElement('.sidebox.search input[name=seastr]'))
+                            {
+                                new SuggestionHTML(elISearch,
+                                        {
+                                            'url': '/vyhledavani',
+                                            'imgLoadingSrc': '/layout/img/ui/loading.suggestion.gif',
+                                            useLoadingBox: true,
+                                            loadingElement: ld
+                                        });
+                            }
+                        });
+            //]]></script>
+                </div>
+            </div>
+            <div id="site_content">
+                <div id="left_banner">
+                    <div class="sidebox banner box12">
+                        <div class="inside">
+                            <img src="/data/imgauto/2/0/Banner.png" alt="" />				</div>
+                    </div>					</div>
+                <div id="right_banner">
+                    <div class="sidebox banner box12">
+                        <div class="inside">
+                            <img src="/data/imgauto/2/0/Banner.png" alt="" />				</div>
+                    </div>					</div>
 
-</div>					</div>
-		<div class="right_content">
-			<h1>Seznam událostí</h1>
-							<link rel="stylesheet" type="text/css" media="all" href="/layout/css/datepicker_jqui/datepicker_jqui.css" />
+                <div class="content_subpage">
+                    <div id="clubs" class="list events">
+                        <div class="right_sidebar left_sidebar">
+                            <div class="sidebox top_events box16">
 
-<script src="/engine/js/MooTools/DatePicker/Locale.en-US.DatePicker.js" type="text/javascript"></script>
-<script src="/engine/js/MooTools/DatePicker/Picker.js" type="text/javascript"></script>
-<script src="/engine/js/MooTools/DatePicker/Picker.Attach.js" type="text/javascript"></script>
-<script src="/engine/js/MooTools/DatePicker/Picker.Date.js" type="text/javascript"></script>
+                                <h2>Top události</h2>
+                                <div class="inside">
+                                    <div class="item number1">
+                                        <h3><strong>06/06/2015 18:00</strong> <a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1172">HOUSE 4 U BOAT FIREWORKS EDITION</a></h3>
+                                        <div class="desc">
+                                            SPECIÁLNÍ EDICE HOUSE 4 U BOAT V RÁMCI OHŇOSTROJŮ IGNIS BRUNENSIS!
 
-<div class="filter" id="idClubsFilter">
-	<form action="" method="post">
-		<input type="hidden" name="posted" value="filter" />
+                                            OMEZENÁ KAPACITA!!<br />
+                                            <strong>Tabarin</strong>
+                                        </div>
+                                    </div>
 
-		<div class="item fulltext">
-			<label>Fulltext</label>
-			<div class="field">
-				<input type="text" name="filter[fulltext]" value="" size="35" placeholder="Hledat podle názvu, popisu…" />
-			</div>
-		</div>
+                                    <a href="/udalosti" class="more">
+                                        Další události			</a>
+                                </div>
 
-		<div class="item type">
-			<label>Typ</label>
-			<div class="field">
-				<select name="filter[type]">
-					<option value="">- Vše -</option>
-											<option value="Benefiční festival"  >Benefiční festival</option>
-											<option value="Divadelní představení"  >Divadelní představení</option>
-											<option value="Filmový večer"  >Filmový večer</option>
-											<option value="Karaoke párty"  >Karaoke párty</option>
-											<option value="Koncert"  >Koncert</option>
-											<option value="Ladies Night"  >Ladies Night</option>
-											<option value="Módní přehlídka"  >Módní přehlídka</option>
-											<option value="Narozeniny "  >Narozeniny </option>
-											<option value="Party"  >Party</option>
-											<option value="Slezina"  >Slezina</option>
-											<option value="Specializovaná akce"  >Specializovaná akce</option>
-											<option value="Stand up comedy show"  >Stand up comedy show</option>
-											<option value="Talk show"  >Talk show</option>
-											<option value="Trh"  >Trh</option>
-									</select>
-			</div>
-		</div>
+                            </div>					</div>
+                        <div class="right_content">
+                            <h1>Seznam událostí</h1>
+                            <link rel="stylesheet" type="text/css" media="all" href="/layout/css/datepicker_jqui/datepicker_jqui.css" />
 
-		<div class="item type">
-			<label>Hudební styl</label>
-			<div class="field">
-				<select name="filter[musictype]">
-					<option value="">- Vše -</option>
-											<option value=" hvězdy českých kapel s jedinečnými DJ sety a živá vystoupen"  > hvězdy českých kapel s jedinečnými DJ sety a živá vystoupen</option>
-											<option value="Alternativní hudba"  >Alternativní hudba</option>
-											<option value="Bez muziky"  >Bez muziky</option>
-											<option value="Blues"  >Blues</option>
-											<option value="Bounce"  >Bounce</option>
-											<option value="Cimbálová"  >Cimbálová</option>
-											<option value="Country"  >Country</option>
-											<option value="Dance"  >Dance</option>
-											<option value="Dj's"  >Dj's</option>
-											<option value="DnB"  >DnB</option>
-											<option value="DnB, Reggae"  >DnB, Reggae</option>
-											<option value="Drum and jazz"  >Drum and jazz</option>
-											<option value="Dubstep"  >Dubstep</option>
-											<option value="EDM"  >EDM</option>
-											<option value="Electroswing"  >Electroswing</option>
-											<option value="Elektro"  >Elektro</option>
-											<option value="Elektro,Dance"  >Elektro,Dance</option>
-											<option value="Flamenco"  >Flamenco</option>
-											<option value="Folk"  >Folk</option>
-											<option value="Folk Metal"  >Folk Metal</option>
-											<option value="Folktronika"  >Folktronika</option>
-											<option value="Funky"  >Funky</option>
-											<option value="Heavy metal"  >Heavy metal</option>
-											<option value="Hip Hop"  >Hip Hop</option>
-											<option value="House"  >House</option>
-											<option value="Indie"  >Indie</option>
-											<option value="Jazz"  >Jazz</option>
-											<option value="Jukebox"  >Jukebox</option>
-											<option value="Metal"  >Metal</option>
-											<option value="Metalcore"  >Metalcore</option>
-											<option value="new"  >new</option>
-											<option value="Oldies"  >Oldies</option>
-											<option value="Orientovaný"  >Orientovaný</option>
-											<option value="Porno Folk"  >Porno Folk</option>
-											<option value="Psytrance"  >Psytrance</option>
-											<option value="Punk"  >Punk</option>
-											<option value="Rap"  >Rap</option>
-											<option value="Reggae"  >Reggae</option>
-											<option value="Rock"  >Rock</option>
-											<option value="Rock 'n' Roll"  >Rock 'n' Roll</option>
-											<option value="Různý"  >Různý</option>
-											<option value="Scream’n’roll"  >Scream’n’roll</option>
-											<option value="Swing"  >Swing</option>
-											<option value="Symphonic Metal"  >Symphonic Metal</option>
-											<option value="Techno"  >Techno</option>
-											<option value="temně podladěné kytary"  >temně podladěné kytary</option>
-									</select>
-			</div>
-		</div>
+                            <script src="/engine/js/MooTools/DatePicker/Locale.en-US.DatePicker.js" type="text/javascript"></script>
+                            <script src="/engine/js/MooTools/DatePicker/Picker.js" type="text/javascript"></script>
+                            <script src="/engine/js/MooTools/DatePicker/Picker.Attach.js" type="text/javascript"></script>
+                            <script src="/engine/js/MooTools/DatePicker/Picker.Date.js" type="text/javascript"></script>
 
-		<div class="item type">
-			<label>Město</label>
-			<div class="field">
-				<select name="filter[city]" class="checksub" rel="{parent: 'city', sub: 'city_part'}">
-					<option value="">- Vše -</option>
-											<option value="Blansko"  >Blansko</option>
-											<option value="Boskovice"  >Boskovice</option>
-											<option value="Brno" selected="" >Brno</option>
-											<option value="Hodonín "  >Hodonín </option>
-											<option value="Hradčany"  >Hradčany</option>
-											<option value="Kyjov"  >Kyjov</option>
-											<option value="Letovice"  >Letovice</option>
-											<option value="Mikulov"  >Mikulov</option>
-											<option value="Moravský Krumlov"  >Moravský Krumlov</option>
-											<option value="Velké Pavlovice"  >Velké Pavlovice</option>
-											<option value="Veselí nad Moravou"  >Veselí nad Moravou</option>
-											<option value="Zaječí"  >Zaječí</option>
-									</select>
-				<div class="subcontainer">
-								</div>
-			</div>
-		</div>
+                            <div class="filter" id="idClubsFilter">
+                                <form action="" method="post">
+                                    <input type="hidden" name="posted" value="filter" />
 
-		<div class="item date">
-			<label>Datum</label>
-			<div class="field">
-								<input type="hidden" name="filter[t_event]" value="" id="t_event" />
-				<input type="text" value="" id="t_eventdisplayed" size="12" />
-				<span class="close"  id="t_eventclear"></span>
-				<script type="text/javascript">//<![CDATA[
-					new Picker.Date($('t_eventdisplayed'),
-					{
-						//minDate: new Date(),
-						timePicker: !true,
-						pickerClass: 'datepicker_jqui',
-						//toggleElements: '.t_start-toggle',
-						format: '%d.%m.%Y',
-						useFadeInOut: !Browser.ie,
-						onSelect: function(date)
-						{
-							$('t_event').set('value', date.format('%s'));
-							$('t_eventdisplayed').set('value', date.format('%d.%m.%Y'));
-						}
-					});
-					$('t_eventclear').addEvent('click', function()
-					{
-						$('t_event').set('value', '');
-						$('t_eventdisplayed').set('value', '');
-					});
-				//]]></script>
-			</div>
-		</div>
+                                    <div class="item fulltext">
+                                        <label>Fulltext</label>
+                                        <div class="field">
+                                            <input type="text" name="filter[fulltext]" value="" size="35" placeholder="Hledat podle názvu, popisu…" />
+                                        </div>
+                                    </div>
 
-		<div class="item services">
-			<label>Služby</label>
-			<div class="field">
-									<div class="field_item">
-												<input type="hidden" name="filter[b_wheelchairaccess]" value="0" />
-						<input type="checkbox" id="cb_b_wheelchairaccess" name="filter[b_wheelchairaccess]" value="1"  />
-						<label for="cb_b_wheelchairaccess">Bezbariérový přístup</label>
-					</div>
-									<div class="field_item">
-												<input type="hidden" name="filter[b_atm]" value="0" />
-						<input type="checkbox" id="cb_b_atm" name="filter[b_atm]" value="1"  />
-						<label for="cb_b_atm">Bankomat</label>
-					</div>
-									<div class="field_item">
-												<input type="hidden" name="filter[b_parking]" value="0" />
-						<input type="checkbox" id="cb_b_parking" name="filter[b_parking]" value="1"  />
-						<label for="cb_b_parking">Parkování</label>
-					</div>
-									<div class="field_item">
-												<input type="hidden" name="filter[b_payonline]" value="0" />
-						<input type="checkbox" id="cb_b_payonline" name="filter[b_payonline]" value="1"  />
-						<label for="cb_b_payonline">Platba online</label>
-					</div>
-									<div class="field_item">
-												<input type="hidden" name="filter[b_paycard]" value="0" />
-						<input type="checkbox" id="cb_b_paycard" name="filter[b_paycard]" value="1"  />
-						<label for="cb_b_paycard">Platba kartou</label>
-					</div>
-									<div class="field_item">
-												<input type="hidden" name="filter[b_airconditioning]" value="0" />
-						<input type="checkbox" id="cb_b_airconditioning" name="filter[b_airconditioning]" value="1"  />
-						<label for="cb_b_airconditioning">Klimatizace</label>
-					</div>
-									<div class="field_item">
-												<input type="hidden" name="filter[b_wifi]" value="0" />
-						<input type="checkbox" id="cb_b_wifi" name="filter[b_wifi]" value="1"  />
-						<label for="cb_b_wifi">Wifi připojení</label>
-					</div>
-									<div class="field_item">
-												<input type="hidden" name="filter[b_wheelchairaccess]" value="0" />
-						<input type="checkbox" id="cb_b_wheelchairaccess" name="filter[b_wheelchairaccess]" value="1"  />
-						<label for="cb_b_wheelchairaccess">Bezbariérový přístup</label>
-					</div>
-							</div>
-		</div>
+                                    <div class="item type">
+                                        <label>Typ</label>
+                                        <div class="field">
+                                            <select name="filter[type]">
+                                                <option value="">- Vše -</option>
+                                                <option value="Benefiční festival"  >Benefiční festival</option>
+                                                <option value="Divadelní představení"  >Divadelní představení</option>
+                                                <option value="Filmový večer"  >Filmový večer</option>
+                                                <option value="Karaoke párty"  >Karaoke párty</option>
+                                                <option value="Koncert"  >Koncert</option>
+                                                <option value="Ladies Night"  >Ladies Night</option>
+                                                <option value="Módní přehlídka"  >Módní přehlídka</option>
+                                                <option value="Narozeniny "  >Narozeniny </option>
+                                                <option value="Party"  >Party</option>
+                                                <option value="Slezina"  >Slezina</option>
+                                                <option value="Specializovaná akce"  >Specializovaná akce</option>
+                                                <option value="Stand up comedy show"  >Stand up comedy show</option>
+                                                <option value="Talk show"  >Talk show</option>
+                                                <option value="Trh"  >Trh</option>
+                                            </select>
+                                        </div>
+                                    </div>
 
-		<button type="submit" class="submit">Filtrovat</button>
-	</form>
-</div>
+                                    <div class="item type">
+                                        <label>Hudební styl</label>
+                                        <div class="field">
+                                            <select name="filter[musictype]">
+                                                <option value="">- Vše -</option>
+                                                <option value=" hvězdy českých kapel s jedinečnými DJ sety a živá vystoupen"  > hvězdy českých kapel s jedinečnými DJ sety a živá vystoupen</option>
+                                                <option value="Alternativní hudba"  >Alternativní hudba</option>
+                                                <option value="Bez muziky"  >Bez muziky</option>
+                                                <option value="Blues"  >Blues</option>
+                                                <option value="Bounce"  >Bounce</option>
+                                                <option value="Cimbálová"  >Cimbálová</option>
+                                                <option value="Country"  >Country</option>
+                                                <option value="Dance"  >Dance</option>
+                                                <option value="Dj's"  >Dj's</option>
+                                                <option value="DnB"  >DnB</option>
+                                                <option value="DnB, Reggae"  >DnB, Reggae</option>
+                                                <option value="Drum and jazz"  >Drum and jazz</option>
+                                                <option value="Dubstep"  >Dubstep</option>
+                                                <option value="EDM"  >EDM</option>
+                                                <option value="Electroswing"  >Electroswing</option>
+                                                <option value="Elektro"  >Elektro</option>
+                                                <option value="Elektro,Dance"  >Elektro,Dance</option>
+                                                <option value="Flamenco"  >Flamenco</option>
+                                                <option value="Folk"  >Folk</option>
+                                                <option value="Folk Metal"  >Folk Metal</option>
+                                                <option value="Folktronika"  >Folktronika</option>
+                                                <option value="Funky"  >Funky</option>
+                                                <option value="Heavy metal"  >Heavy metal</option>
+                                                <option value="Hip Hop"  >Hip Hop</option>
+                                                <option value="House"  >House</option>
+                                                <option value="Indie"  >Indie</option>
+                                                <option value="Jazz"  >Jazz</option>
+                                                <option value="Jukebox"  >Jukebox</option>
+                                                <option value="Metal"  >Metal</option>
+                                                <option value="Metalcore"  >Metalcore</option>
+                                                <option value="new"  >new</option>
+                                                <option value="Oldies"  >Oldies</option>
+                                                <option value="Orientovaný"  >Orientovaný</option>
+                                                <option value="Porno Folk"  >Porno Folk</option>
+                                                <option value="Psytrance"  >Psytrance</option>
+                                                <option value="Punk"  >Punk</option>
+                                                <option value="Rap"  >Rap</option>
+                                                <option value="Reggae"  >Reggae</option>
+                                                <option value="Rock"  >Rock</option>
+                                                <option value="Rock 'n' Roll"  >Rock 'n' Roll</option>
+                                                <option value="Různý"  >Různý</option>
+                                                <option value="Scream’n’roll"  >Scream’n’roll</option>
+                                                <option value="Swing"  >Swing</option>
+                                                <option value="Symphonic Metal"  >Symphonic Metal</option>
+                                                <option value="Techno"  >Techno</option>
+                                                <option value="temně podladěné kytary"  >temně podladěné kytary</option>
+                                            </select>
+                                        </div>
+                                    </div>
 
-<script type="text/javascript">//<![CDATA[
-	$('idClubsFilter').getElements('.checksub').addEvent('change', function()
-	{
-		var eSub = this.getParent().getElement('.subcontainer');
+                                    <div class="item type">
+                                        <label>Město</label>
+                                        <div class="field">
+                                            <select name="filter[city]" class="checksub" rel="{parent: 'city', sub: 'city_part'}">
+                                                <option value="">- Vše -</option>
+                                                <option value="Blansko"  >Blansko</option>
+                                                <option value="Boskovice"  >Boskovice</option>
+                                                <option value="Brno" selected="" >Brno</option>
+                                                <option value="Hodonín "  >Hodonín </option>
+                                                <option value="Hradčany"  >Hradčany</option>
+                                                <option value="Kyjov"  >Kyjov</option>
+                                                <option value="Letovice"  >Letovice</option>
+                                                <option value="Mikulov"  >Mikulov</option>
+                                                <option value="Moravský Krumlov"  >Moravský Krumlov</option>
+                                                <option value="Velké Pavlovice"  >Velké Pavlovice</option>
+                                                <option value="Veselí nad Moravou"  >Veselí nad Moravou</option>
+                                                <option value="Zaječí"  >Zaječí</option>
+                                            </select>
+                                            <div class="subcontainer">
+                                            </div>
+                                        </div>
+                                    </div>
 
-		var request = new _ui.AjaxLoad(
-		{
-			element: this.getParent(),
-			type: 'html',
-			url: '/podniky?action=ajaxgetsubcolumn',
-			method: 'get',
-			data: null,
-			jsEval: true,
-			link: 'cancel',
+                                    <div class="item date">
+                                        <label>Datum</label>
+                                        <div class="field">
+                                            <input type="hidden" name="filter[t_event]" value="" id="t_event" />
+                                            <input type="text" value="" id="t_eventdisplayed" size="12" />
+                                            <span class="close"  id="t_eventclear"></span>
+                                            <script type="text/javascript">//<![CDATA[
+                        new Picker.Date($('t_eventdisplayed'),
+                                {
+                                    //minDate: new Date(),
+                                    timePicker: !true,
+                                    pickerClass: 'datepicker_jqui',
+                                    //toggleElements: '.t_start-toggle',
+                                    format: '%d.%m.%Y',
+                                    useFadeInOut: !Browser.ie,
+                                    onSelect: function (date)
+                                    {
+                                        $('t_event').set('value', date.format('%s'));
+                                        $('t_eventdisplayed').set('value', date.format('%d.%m.%Y'));
+                                    }
+                                });
+                        $('t_eventclear').addEvent('click', function ()
+                        {
+                            $('t_event').set('value', '');
+                            $('t_eventdisplayed').set('value', '');
+                        });
+            //]]></script>
+                                        </div>
+                                    </div>
 
-			loadingOptions:
-			{
-				enabled: true,
-				bgColor: '',
-				img:
-				{
-					enabled: true,
-					src: '/layout/img/ui/loading.suggestion.gif',
-					pos: {x: 'center', y: 'center'}
-				},
-				position: {top: 0, bottom: 0, right: 3},
-				size: {width: '100%'}
-			},
+                                    <div class="item services">
+                                        <label>Služby</label>
+                                        <div class="field">
+                                            <div class="field_item">
+                                                <input type="hidden" name="filter[b_wheelchairaccess]" value="0" />
+                                                <input type="checkbox" id="cb_b_wheelchairaccess" name="filter[b_wheelchairaccess]" value="1"  />
+                                                <label for="cb_b_wheelchairaccess">Bezbariérový přístup</label>
+                                            </div>
+                                            <div class="field_item">
+                                                <input type="hidden" name="filter[b_atm]" value="0" />
+                                                <input type="checkbox" id="cb_b_atm" name="filter[b_atm]" value="1"  />
+                                                <label for="cb_b_atm">Bankomat</label>
+                                            </div>
+                                            <div class="field_item">
+                                                <input type="hidden" name="filter[b_parking]" value="0" />
+                                                <input type="checkbox" id="cb_b_parking" name="filter[b_parking]" value="1"  />
+                                                <label for="cb_b_parking">Parkování</label>
+                                            </div>
+                                            <div class="field_item">
+                                                <input type="hidden" name="filter[b_payonline]" value="0" />
+                                                <input type="checkbox" id="cb_b_payonline" name="filter[b_payonline]" value="1"  />
+                                                <label for="cb_b_payonline">Platba online</label>
+                                            </div>
+                                            <div class="field_item">
+                                                <input type="hidden" name="filter[b_paycard]" value="0" />
+                                                <input type="checkbox" id="cb_b_paycard" name="filter[b_paycard]" value="1"  />
+                                                <label for="cb_b_paycard">Platba kartou</label>
+                                            </div>
+                                            <div class="field_item">
+                                                <input type="hidden" name="filter[b_airconditioning]" value="0" />
+                                                <input type="checkbox" id="cb_b_airconditioning" name="filter[b_airconditioning]" value="1"  />
+                                                <label for="cb_b_airconditioning">Klimatizace</label>
+                                            </div>
+                                            <div class="field_item">
+                                                <input type="hidden" name="filter[b_wifi]" value="0" />
+                                                <input type="checkbox" id="cb_b_wifi" name="filter[b_wifi]" value="1"  />
+                                                <label for="cb_b_wifi">Wifi připojení</label>
+                                            </div>
+                                            <div class="field_item">
+                                                <input type="hidden" name="filter[b_wheelchairaccess]" value="0" />
+                                                <input type="checkbox" id="cb_b_wheelchairaccess" name="filter[b_wheelchairaccess]" value="1"  />
+                                                <label for="cb_b_wheelchairaccess">Bezbariérový přístup</label>
+                                            </div>
+                                        </div>
+                                    </div>
 
-			onLoadStart: function(){},
-			onComplete: function(){},
-			onSuccess: function(response)
-			{
-				eSub.empty();
-				eSub.set('html', response.html);
-			}
-		});
+                                    <button type="submit" class="submit">Filtrovat</button>
+                                </form>
+                            </div>
 
-		var data = JSON.decode(this.get('rel'));
+                            <script type="text/javascript">//<![CDATA[
+                                $('idClubsFilter').getElements('.checksub').addEvent('change', function ()
+                                {
+                                    var eSub = this.getParent().getElement('.subcontainer');
 
-		
-		request.addParam('parent', data.parent);
-		request.addParam('column', data.sub);
-		request.addParam('value', this.options[this.selectedIndex].value);
-		request.send();
-	});
-//]]></script>
-						<div class="content">
-				<div>
-			<div class="pagebar">
+                                    var request = new _ui.AjaxLoad(
+                                            {
+                                                element: this.getParent(),
+                                                type: 'html',
+                                                url: '/podniky?action=ajaxgetsubcolumn',
+                                                method: 'get',
+                                                data: null,
+                                                jsEval: true,
+                                                link: 'cancel',
+                                                loadingOptions:
+                                                        {
+                                                            enabled: true,
+                                                            bgColor: '',
+                                                            img:
+                                                                    {
+                                                                        enabled: true,
+                                                                        src: '/layout/img/ui/loading.suggestion.gif',
+                                                                        pos: {x: 'center', y: 'center'}
+                                                                    },
+                                                            position: {top: 0, bottom: 0, right: 3},
+                                                            size: {width: '100%'}
+                                                        },
+                                                onLoadStart: function () {
+                                                },
+                                                onComplete: function () {
+                                                },
+                                                onSuccess: function (response)
+                                                {
+                                                    eSub.empty();
+                                                    eSub.set('html', response.html);
+                                                }
+                                            });
 
-		<div class="page_switch">
-						<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=events&amp;from=100" class="goright"></a>		<div class="inside">
-												<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=events&amp;from=0" class="active">1</a>
-																<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=events&amp;from=100" >2</a>
-																<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=events&amp;from=200" >3</a>
-																<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=events&amp;from=300" >4</a>
-																<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=events&amp;from=400" >5</a>
-																<a>...</a>
-			 													<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=events&amp;from=900" >10</a>
-									</div>
-			</div>
+                                    var data = JSON.decode(this.get('rel'));
 
-	<div class="max_items">
-		Stránkování:
-					<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=events&amp;from=0&amp;count=10" class="">
-				10
-			</a>
-					<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=events&amp;from=0&amp;count=20" class="">
-				20
-			</a>
-					<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=events&amp;from=0&amp;count=40" class="">
-				40
-			</a>
-			</div>
 
-	<div class="clearer"></div>
-</div>
-		<div class="clubs_list">
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1284" title="Narvan forever @Sono Centrum: 27.5. 2015" class="image">
-					<img src="/data/imgauto/9/3/11160586_1638300956384192_1527154387340422312_n.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1284" title="Narvan forever @Sono Centrum: 27.5. 2015">Narvan forever @Sono Centrum: 27.5. 2015</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=92">Sono</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>27/05/2015<br/>20:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>?? Kč</span>
-							</div>
-						</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=565" title="Jazzová legenda - JAROMÍR HNILIČKA + hosté...jam session" class="image">
-					<img src="/data/imgauto/9/3/jjjjjj.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=565" title="Jazzová legenda - JAROMÍR HNILIČKA + hosté...jam session">Jazzová legenda - JAROMÍR HNILIČKA + hosté...jam session</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=33">Fičák</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>28/05/2015<br/>20:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>200 Kč</span>
-							</div>
-						</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1332" title=" KONCERT U2 STAY REVIVAL + THE FAKERS - PEARL JAM COVER BAND" class="image">
-					<img src="/data/imgauto/9/3/11042946_10153118427237970_459276973440007070_n.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1332" title=" KONCERT U2 STAY REVIVAL + THE FAKERS - PEARL JAM COVER BAND"> KONCERT U2 STAY REVIVAL + THE FAKERS - PEARL JAM COVER BAND</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=65">Metro</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>28/05/2015<br/>20:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>110/130,- Kč</span>
-							</div>
-						</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1260" title="DANCE SENSATION LIVE vol.2 | DJ ASH vs DJ Slepi | Vaca Loca 29.5" class="image">
-					<img src="/data/imgauto/9/3/11091272_10152685958281712_8436639395605370863_n1_.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1260" title="DANCE SENSATION LIVE vol.2 | DJ ASH vs DJ Slepi | Vaca Loca 29.5">DANCE SENSATION LIVE vol.2 | DJ ASH vs DJ Slepi | Vaca Loca 29.5</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=388">Vaca loca</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>29/05/2015<br/>21:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>?? Kč</span>
-							</div>
-						</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1302" title="TECHNO w/ Thin &amp; Thick, Danny Bright, Foxx" class="image">
-					<img src="/data/imgauto/9/3/11175002_10153305633529182_9209390907809735481_n.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1302" title="TECHNO w/ Thin &amp; Thick, Danny Bright, Foxx">TECHNO w/ Thin & Thick, Danny Bright, Foxx</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=74">Perpetuum</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>30/05/2015</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>?? Kč</span>
-							</div>
-						</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1210" title="KISS Forever Band (Hu) &amp; ALICE COOPER Revival Band Bratislava @S" class="image">
-					<img src="/data/imgauto/9/3/10481686_1624253484455606_7297483714494360103_n.png" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1210" title="KISS Forever Band (Hu) &amp; ALICE COOPER Revival Band Bratislava @S">KISS Forever Band (Hu) & ALICE COOPER Revival Band Bratislava @S</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=92">Sono</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>30/05/2015<br/>20:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>290,- Kč</span>
-							</div>
-						</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1274" title="Dáša Vokatá a Oldřich Kaiser: Rock divokých koní @ 30.5.2015 @ M" class="image">
-					<img src="/data/imgauto/9/3/72_.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1274" title="Dáša Vokatá a Oldřich Kaiser: Rock divokých koní @ 30.5.2015 @ M">Dáša Vokatá a Oldřich Kaiser: Rock divokých koní @ 30.5.2015 @ M</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=64">Mersey</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>30/05/2015<br/>20:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>250 Kč</span>
-							</div>
-						</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1333" title="Na Stojáka - červen 2015" class="image">
-					<img src="/data/imgauto/9/3/22530_10153219888662970_2589685386113162950_n.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1333" title="Na Stojáka - červen 2015">Na Stojáka - červen 2015</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=65">Metro</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>02/06/2015<br/>18:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>210,- Kč</span>
-							</div>
-						</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=566" title="Řecké léto s MARTHOU a TENOU ELEFTERIADU" class="image">
-					<img src="/data/imgauto/9/3/%C5%99%C5%99%C5%99%C5%99%C5%99.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=566" title="Řecké léto s MARTHOU a TENOU ELEFTERIADU">Řecké léto s MARTHOU a TENOU ELEFTERIADU</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=33">Fičák</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>04/06/2015<br/>20:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>260 Kč</span>
-							</div>
-						</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1275" title="Rap Night" class="image">
-					<img src="/data/imgauto/9/3/83_.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1275" title="Rap Night">Rap Night</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=64">Mersey</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>05/06/2015<br/>20:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>100/120 Kč</span>
-							</div>
-						</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1172" title="HOUSE 4 U BOAT FIREWORKS EDITION" class="image">
-					<img src="/data/imgauto/9/3/11076288_10152822226098111_6303356006708015375_n.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1172" title="HOUSE 4 U BOAT FIREWORKS EDITION">HOUSE 4 U BOAT FIREWORKS EDITION</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=381">Tabarin</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>06/06/2015<br/>18:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>?? Kč</span>
-							</div>
-						</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1288" title="Vladimír Merta - recitál" class="image">
-					<img src="/data/imgauto/9/3/a109_.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1288" title="Vladimír Merta - recitál">Vladimír Merta - recitál</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=251">Živo U Palečka</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>11/06/2015<br/>19:30</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>?? Kč</span>
-							</div>
-						</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=692" title="BOHOUŠ JOSEF s hostem" class="image">
-					<img src="/data/imgauto/9/3/mmmmmmmmmmmmmmmmmmmmmmmmmmmmmm.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=692" title="BOHOUŠ JOSEF s hostem">BOHOUŠ JOSEF s hostem</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=33">Fičák</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>11/06/2015<br/>20:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span></span>
-							</div>
-						</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=879" title="HUMPOLECKÝ DIXIELAND" class="image">
-					<img src="/data/imgauto/9/3/10974313_850298215034115_3814126411619888092_o.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=879" title="HUMPOLECKÝ DIXIELAND">HUMPOLECKÝ DIXIELAND</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=33">Fičák</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>18/06/2015<br/>20:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span></span>
-							</div>
-						</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1334" title="KONCERT BIJOUTERRIER" class="image">
-					<img src="/data/imgauto/9/3/11351203_10153304436502970_1927804985401222264_n.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1334" title="KONCERT BIJOUTERRIER">KONCERT BIJOUTERRIER</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=65">Metro</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>18/06/2015<br/>20:30</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>210,- Kč</span>
-							</div>
-						</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=693" title="KÓSAVÁ DEKA - betelné bluegrass z Brna" class="image">
-					<img src="/data/imgauto/9/3/kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=693" title="KÓSAVÁ DEKA - betelné bluegrass z Brna">KÓSAVÁ DEKA - betelné bluegrass z Brna</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=33">Fičák</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>25/06/2015<br/>20:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span></span>
-							</div>
-						</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=954" title="Oldies Party s tradici již 20 let - Oldies Party with tradition " class="image">
-					<img src="/data/imgauto/9/3/q18_.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=954" title="Oldies Party s tradici již 20 let - Oldies Party with tradition ">Oldies Party s tradici již 20 let - Oldies Party with tradition </a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=64">Mersey</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>25/06/2015<br/>20:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>?? Kč</span>
-							</div>
-						</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=821" title="PYŽAMOVÁ PÁRTY se SCREAMERS v rámci OLDIES" class="image">
-					<img src="/data/imgauto/9/3/1503966_844914842239119_4422515357520500965_n.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=821" title="PYŽAMOVÁ PÁRTY se SCREAMERS v rámci OLDIES">PYŽAMOVÁ PÁRTY se SCREAMERS v rámci OLDIES</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=33">Fičák</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>26/06/2015<br/>20:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span></span>
-							</div>
-						</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1289" title="Jaroslav Hutka" class="image">
-					<img src="/data/imgauto/9/3/a110_.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1289" title="Jaroslav Hutka">Jaroslav Hutka</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=251">Živo U Palečka</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>24/09/2015<br/>20:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>150/200 Kč</span>
-							</div>
-						</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1211" title="Irie Révoltés @Sono Centrum : Brno - Album Release Tour" class="image">
-					<img src="/data/imgauto/9/3/11091514_10153219849609510_8426880578675722280_n.png" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1211" title="Irie Révoltés @Sono Centrum : Brno - Album Release Tour">Irie Révoltés @Sono Centrum : Brno - Album Release Tour</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=92">Sono</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>03/10/2015<br/>20:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>450,- Kč</span>
-							</div>
-						</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1212" title="Javory + Javory Beat: Hana &amp; Petr Ulrychovi" class="image">
-					<img src="/data/imgauto/9/3/10357192_1633247930222828_6723644575146440300_n.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1212" title="Javory + Javory Beat: Hana &amp; Petr Ulrychovi">Javory + Javory Beat: Hana & Petr Ulrychovi</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=92">Sono</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>07/10/2015<br/>20:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>490-550,- Kč</span>
-							</div>
-						</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=567" title="BOHOUŠ JOSEF s hostem" class="image">
-					<img src="/data/imgauto/9/3/tttttttttttt.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=567" title="BOHOUŠ JOSEF s hostem">BOHOUŠ JOSEF s hostem</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=33">Fičák</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>08/10/2015<br/>20:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>220 Kč</span>
-							</div>
-						</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1213" title="Elán: unplugged @Sono Centrum: 25.11.2015" class="image">
-					<img src="/data/imgauto/9/3/11136725_1633248716889416_6449150723603878949_n.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1213" title="Elán: unplugged @Sono Centrum: 25.11.2015">Elán: unplugged @Sono Centrum: 25.11.2015</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=92">Sono</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>25/11/2015<br/>20:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>1290-2900,- Kč</span>
-							</div>
-						</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=568" title="Předvánoční koncert BOHOUŠE JOSEFA s hosty" class="image">
-					<img src="/data/imgauto/9/3/tttttttttttt1_.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=568" title="Předvánoční koncert BOHOUŠE JOSEFA s hosty">Předvánoční koncert BOHOUŠE JOSEFA s hosty</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=33">Fičák</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>03/12/2015<br/>20:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span></span>
-							</div>
-						</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=569" title="Vánoční koncert Pavla Helána s hostem" class="image">
-					<img src="/data/imgauto/9/3/pppppppppp.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=569" title="Vánoční koncert Pavla Helána s hostem">Vánoční koncert Pavla Helána s hostem</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=33">Fičák</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>17/12/2015<br/>20:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span></span>
-							</div>
-						</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1248" title="ELEKTRASHOW" class="image">
-					<img src="/data/imgauto/9/3/102_.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1248" title="ELEKTRASHOW">ELEKTRASHOW</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=60">Livingstone</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>19/01/2038<br/>04:14</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>???</span>
-							</div>
-						</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1263" title="HOREČKA SOBOTNÍ NOCI /CAPTAIN &amp; JÄGBULL V AKCI! /" class="image">
-					<img src="/data/imgauto/9/3/10985861_10153299107108083_6744884325539057560_n.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1263" title="HOREČKA SOBOTNÍ NOCI /CAPTAIN &amp; JÄGBULL V AKCI! /">HOREČKA SOBOTNÍ NOCI /CAPTAIN & JÄGBULL V AKCI! /</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=385">Two Faces Club</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>25/05/2015<br/>20:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>?? Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1301" title="EXIT w/ Revis, Kifli, Mylo" class="image">
-					<img src="/data/imgauto/9/3/18193_10153305631144182_100591364700385625_n.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1301" title="EXIT w/ Revis, Kifli, Mylo">EXIT w/ Revis, Kifli, Mylo</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=74">Perpetuum</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>23/05/2015<br/>21:30</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>?? Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1250" title="PLATTARIS, ZETÖR, DEATHWARD" class="image">
-					<img src="/data/imgauto/9/3/25_.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1250" title="PLATTARIS, ZETÖR, DEATHWARD">PLATTARIS, ZETÖR, DEATHWARD</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=61">M13</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>23/05/2015<br/>19:30</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>120 Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1323" title="Fishing strip &amp; Bod Omylu @ BRNO | ZA VAMI TOUR 2015" class="image">
-					<img src="/data/imgauto/9/3/a117_.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1323" title="Fishing strip &amp; Bod Omylu @ BRNO | ZA VAMI TOUR 2015">Fishing strip & Bod Omylu @ BRNO | ZA VAMI TOUR 2015</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=31">Eleven club</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>23/05/2015<br/>19:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>?? Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1247" title="CITADELA 2015" class="image">
-					<img src="/data/imgauto/9/3/92_.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1247" title="CITADELA 2015">CITADELA 2015</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=57">Laser show hall - Bobycentrum</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>23/05/2015</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>499-899 Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1300" title="FREITAG TECHNO w/ ORBITH, NO-ON, Deivis, FlyTech" class="image">
-					<img src="/data/imgauto/9/3/11188411_10153305629279182_6705148968278836901_n.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1300" title="FREITAG TECHNO w/ ORBITH, NO-ON, Deivis, FlyTech">FREITAG TECHNO w/ ORBITH, NO-ON, Deivis, FlyTech</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=74">Perpetuum</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>22/05/2015<br/>21:30</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>?? Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1188" title="DJ WICH v 7.nebi // 22.5.2015" class="image">
-					<img src="/data/imgauto/9/3/42_.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1188" title="DJ WICH v 7.nebi // 22.5.2015">DJ WICH v 7.nebi // 22.5.2015</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=11">7. nebe</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>22/05/2015<br/>21:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>???</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1216" title="DANCE SENSATION LIVE vol.2 | DJ ASH vs DJ Slepi | Vaca Loca 22.5" class="image">
-					<img src="/data/imgauto/9/3/11091272_10152685958281712_8436639395605370863_n.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1216" title="DANCE SENSATION LIVE vol.2 | DJ ASH vs DJ Slepi | Vaca Loca 22.5">DANCE SENSATION LIVE vol.2 | DJ ASH vs DJ Slepi | Vaca Loca 22.5</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=388">Vaca loca</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>22/05/2015<br/>21:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>?? Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1283" title="G’oldies (Greatest hits of 80‘s a 90‘s) @Sono Centrum: 22.5.2015" class="image">
-					<img src="/data/imgauto/9/3/11147584_1638299173051037_549294763002377113_n.png" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1283" title="G’oldies (Greatest hits of 80‘s a 90‘s) @Sono Centrum: 22.5.2015">G’oldies (Greatest hits of 80‘s a 90‘s) @Sono Centrum: 22.5.2015</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=92">Sono</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>22/05/2015<br/>21:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>50 Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1273" title="Anorexic with DJ Tvyks" class="image">
-					<img src="/data/imgauto/9/3/64_.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1273" title="Anorexic with DJ Tvyks">Anorexic with DJ Tvyks</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=64">Mersey</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>22/05/2015<br/>20:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>80-250 Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1331" title="It&#039;s SWING Time! | Malá Amerika BRNO 22.5.2015" class="image">
-					<img src="/data/imgauto/9/3/10407038_325034304372627_6624263524917139326_n.png" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1331" title="It&#039;s SWING Time! | Malá Amerika BRNO 22.5.2015">It's SWING Time! | Malá Amerika BRNO 22.5.2015</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=541">Malá Amerika</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>22/05/2015<br/>20:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>100 Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=564" title="NIGHTWISH revival SHOW" class="image">
-					<img src="/data/imgauto/9/3/nnnnnn.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=564" title="NIGHTWISH revival SHOW">NIGHTWISH revival SHOW</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=33">Fičák</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>21/05/2015<br/>20:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>120 Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1257" title="Ivan Mládek &amp; Banjo Band @Sono Centrum: 20.05.2015" class="image">
-					<img src="/data/imgauto/9/3/11051932_1633419486872339_416877128253674061_n1_.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1257" title="Ivan Mládek &amp; Banjo Band @Sono Centrum: 20.05.2015">Ivan Mládek & Banjo Band @Sono Centrum: 20.05.2015</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=92">Sono</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>20/05/2015<br/>20:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>390-490,- Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1330" title="EAST DIVISION VOL IV. w/ BLNDR (FRA) @ KABINET MÚZ" class="image">
-					<img src="/data/imgauto/9/3/10547336_1591523247731605_4710634549859182062_o.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1330" title="EAST DIVISION VOL IV. w/ BLNDR (FRA) @ KABINET MÚZ">EAST DIVISION VOL IV. w/ BLNDR (FRA) @ KABINET MÚZ</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=43">Kabinet můz</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>16/05/2015<br/>22:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>120 Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1090" title="Electrobone @ 16.5.2015 @ Mersey Club Brno" class="image">
-					<img src="/data/imgauto/9/3/w10_.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1090" title="Electrobone @ 16.5.2015 @ Mersey Club Brno">Electrobone @ 16.5.2015 @ Mersey Club Brno</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=64">Mersey</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>16/05/2015<br/>21:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>50/70 Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=855" title="Koncert kapely DuRuS" class="image">
-					<img src="/data/imgauto/9/3/aaa7_.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=855" title="Koncert kapely DuRuS">Koncert kapely DuRuS</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=61">M13</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>16/05/2015<br/>20:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>100 Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1309" title="PLASTIK FUNK &amp; MEKKI MARTIN" class="image">
-					<img src="/data/imgauto/9/3/11150416_10152902056673111_8968573262480842491_n.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1309" title="PLASTIK FUNK &amp; MEKKI MARTIN">PLASTIK FUNK & MEKKI MARTIN</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=381">Tabarin</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>15/05/2015<br/>22:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>?? Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1087" title="Vokálparty na Melodce" class="image">
-					<img src="/data/imgauto/9/3/w7_.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1087" title="Vokálparty na Melodce">Vokálparty na Melodce</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=63">Melodka</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>15/05/2015<br/>20:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>120 Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1209" title="Rocková legenda NAZARETH se vrací do České republiky!" class="image">
-					<img src="/data/imgauto/9/3/11066816_756008744515187_8013625666686914366_n.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1209" title="Rocková legenda NAZARETH se vrací do České republiky!">Rocková legenda NAZARETH se vrací do České republiky!</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=92">Sono</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>15/05/2015<br/>19:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>790-2200,- Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1327" title="DNB DNA X-TRA w/ Forbidden Society" class="image">
-					<img src="/data/imgauto/9/3/a120_.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1327" title="DNB DNA X-TRA w/ Forbidden Society">DNB DNA X-TRA w/ Forbidden Society</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=32">Faval music circus</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>15/05/2015</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>70/100 Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=563" title="Lee banda s hostem - Robert Hlavatý a Band" class="image">
-					<img src="/data/imgauto/9/3/mmmmmmm.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=563" title="Lee banda s hostem - Robert Hlavatý a Band">Lee banda s hostem - Robert Hlavatý a Band</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=33">Fičák</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>14/05/2015<br/>20:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>120 Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1208" title="The Reverend Peyton’s Big Damn Band @Sono Centrum: 14.5.2015 // " class="image">
-					<img src="/data/imgauto/9/3/10985218_1627336427480645_6184479578280508558_n.png" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1208" title="The Reverend Peyton’s Big Damn Band @Sono Centrum: 14.5.2015 // ">The Reverend Peyton’s Big Damn Band @Sono Centrum: 14.5.2015 // </a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=92">Sono</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>14/05/2015<br/>20:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>390,- Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1328" title="FLOEX + band | Fléda | 13.5.2015" class="image">
-					<img src="/data/imgauto/9/3/a121_.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1328" title="FLOEX + band | Fléda | 13.5.2015">FLOEX + band | Fléda | 13.5.2015</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=34">Fléda</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>13/05/2015<br/>22:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>?? Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1256" title="Rock&#039;n&#039;Roll night w. The Fireballs &amp; DJ Bob Cat @Sono Centrum" class="image">
-					<img src="/data/imgauto/9/3/11069608_1633906443490310_2100140933064324488_n.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1256" title="Rock&#039;n&#039;Roll night w. The Fireballs &amp; DJ Bob Cat @Sono Centrum">Rock'n'Roll night w. The Fireballs & DJ Bob Cat @Sono Centrum</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=92">Sono</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>13/05/2015<br/>20:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>?? Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1315" title="UNIVERSITY PARTY (S TEQUILOU, KAPITÁNEM, KŘÍDLY… V AKCI!)" class="image">
-					<img src="/data/imgauto/9/3/11078227_10153375160833083_7297207017143594088_n.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1315" title="UNIVERSITY PARTY (S TEQUILOU, KAPITÁNEM, KŘÍDLY… V AKCI!)">UNIVERSITY PARTY (S TEQUILOU, KAPITÁNEM, KŘÍDLY… V AKCI!)</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=385">Two Faces Club</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>12/05/2015<br/>21:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>?? Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1169" title="Yvonne Sanchez &amp; Pedro Tagliani @Sono_Centrum: 12.5.2015" class="image">
-					<img src="/data/imgauto/9/3/11060095_1622275147986773_4515157068708044121_n.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1169" title="Yvonne Sanchez &amp; Pedro Tagliani @Sono_Centrum: 12.5.2015">Yvonne Sanchez & Pedro Tagliani @Sono_Centrum: 12.5.2015</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=92">Sono</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>12/05/2015<br/>20:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>350,- Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1322" title="Duel Frost/Nixon @Eleven_club: 11_5_2015: studijní projekce: vst" class="image">
-					<img src="/data/imgauto/9/3/a116_.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1322" title="Duel Frost/Nixon @Eleven_club: 11_5_2015: studijní projekce: vst">Duel Frost/Nixon @Eleven_club: 11_5_2015: studijní projekce: vst</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=31">Eleven club</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>11/05/2015<br/>20:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>?? Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1299" title="FRIENDS RIDE!" class="image">
-					<img src="/data/imgauto/9/3/10933899_10153289409744182_7648396788838558218_n.png" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1299" title="FRIENDS RIDE!">FRIENDS RIDE!</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=74">Perpetuum</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>09/05/2015<br/>21:30</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>?? Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1175" title="OLDIES &amp; LIVE Night II Saturday Party | 09.05.2015" class="image">
-					<img src="/data/imgauto/9/3/11045461_975511795827355_8252487712676354168_n.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1175" title="OLDIES &amp; LIVE Night II Saturday Party | 09.05.2015">OLDIES & LIVE Night II Saturday Party | 09.05.2015</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=388">Vaca loca</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>09/05/2015<br/>21:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>?? Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1314" title="HOREČKA SOBOTNÍ NOCI /CAPTAIN &amp; JÄGBULL V AKCI! /" class="image">
-					<img src="/data/imgauto/9/3/11193260_10153375170033083_567179006062147245_n.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1314" title="HOREČKA SOBOTNÍ NOCI /CAPTAIN &amp; JÄGBULL V AKCI! /">HOREČKA SOBOTNÍ NOCI /CAPTAIN & JÄGBULL V AKCI! /</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=385">Two Faces Club</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>09/05/2015<br/>21:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>?? Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1320" title="HONEM pokřtí nové CD !!" class="image">
-					<img src="/data/imgauto/9/3/a115_.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1320" title="HONEM pokřtí nové CD !!">HONEM pokřtí nové CD !!</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=31">Eleven club</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>09/05/2015<br/>19:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>100 Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1319" title="Oldies diskotéka 9.5.2015" class="image">
-					<img src="/data/imgauto/9/3/a114_.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1319" title="Oldies diskotéka 9.5.2015">Oldies diskotéka 9.5.2015</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=27">Deja*Vu</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>09/05/2015<br/>18:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>?? Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1278" title="PAVEL BIDLO / 8.5.2015, Perpetuum, Brno" class="image">
-					<img src="/data/imgauto/9/3/11149423_10153275716459182_6013190953750242898_n.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1278" title="PAVEL BIDLO / 8.5.2015, Perpetuum, Brno">PAVEL BIDLO / 8.5.2015, Perpetuum, Brno</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=74">Perpetuum</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>08/05/2015<br/>21:30</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>?? Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1313" title="UV PAINTING PARTY" class="image">
-					<img src="/data/imgauto/9/3/11072364_10153375168248083_1246500896427484145_n.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1313" title="UV PAINTING PARTY">UV PAINTING PARTY</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=385">Two Faces Club</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>08/05/2015<br/>21:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>?? Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=786" title="Scorpions 50th Anniversary" class="image">
-					<img src="/data/imgauto/9/3/655.jpeg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=786" title="Scorpions 50th Anniversary">Scorpions 50th Anniversary</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=47">Semilasso</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>08/05/2015<br/>20:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>990-1390,- Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1308" title="SOUND" class="image">
-					<img src="/data/imgauto/9/3/11205970_10152902055108111_2854165543576997090_n.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1308" title="SOUND">SOUND</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=381">Tabarin</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>07/05/2015<br/>22:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>?? Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1298" title="THURSDAY TECHNO w/ Dazy, Warphil, Peter Pea, Rastyn, Kaja Puczek" class="image">
-					<img src="/data/imgauto/9/3/11193239_10153297106209182_7366599482921440980_n.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1298" title="THURSDAY TECHNO w/ Dazy, Warphil, Peter Pea, Rastyn, Kaja Puczek">THURSDAY TECHNO w/ Dazy, Warphil, Peter Pea, Rastyn, Kaja Puczek</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=74">Perpetuum</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>07/05/2015<br/>21:30</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>30,- Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1187" title="ČTVRTEČNÍ TECHNO! @ 7.NEBE ★ Orbith / Jerry / Mechanik / Andy Sm" class="image">
-					<img src="/data/imgauto/9/3/32_.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1187" title="ČTVRTEČNÍ TECHNO! @ 7.NEBE ★ Orbith / Jerry / Mechanik / Andy Sm">ČTVRTEČNÍ TECHNO! @ 7.NEBE ★ Orbith / Jerry / Mechanik / Andy Sm</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=11">7. nebe</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>07/05/2015<br/>21:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>70 Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1312" title="CZECH LIBRE PARTY" class="image">
-					<img src="/data/imgauto/9/3/11156155_10153375166433083_4411793275902897414_n1_.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1312" title="CZECH LIBRE PARTY">CZECH LIBRE PARTY</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=385">Two Faces Club</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>07/05/2015<br/>21:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>?? Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=562" title="CRYSTAL ANN" class="image">
-					<img src="/data/imgauto/9/3/eeee.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=562" title="CRYSTAL ANN">CRYSTAL ANN</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=33">Fičák</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>07/05/2015<br/>20:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>50 Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1168" title="1. narozeniny Sono Centra: Supergroup cz (all-star band), Lidopo" class="image">
-					<img src="/data/imgauto/9/3/11000272_1626649864215968_3903133829720791830_n.png" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1168" title="1. narozeniny Sono Centra: Supergroup cz (all-star band), Lidopo">1. narozeniny Sono Centra: Supergroup cz (all-star band), Lidopo</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=92">Sono</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>07/05/2015<br/>20:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>190,- Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1307" title="WEDNESDAY⎢HOUSE 4 U⎢⎢FACEBOOK FREE ENTRY⎢" class="image">
-					<img src="/data/imgauto/9/3/11011762_10152902052913111_4401869786827201454_n.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1307" title="WEDNESDAY⎢HOUSE 4 U⎢⎢FACEBOOK FREE ENTRY⎢">WEDNESDAY⎢HOUSE 4 U⎢⎢FACEBOOK FREE ENTRY⎢</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=381">Tabarin</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>06/05/2015<br/>22:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>?? Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1329" title="Drum Surfing vol. 2" class="image">
-					<img src="/data/imgauto/9/3/a122_.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1329" title="Drum Surfing vol. 2">Drum Surfing vol. 2</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=394">Yacht</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>06/05/2015<br/>21:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>?? Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1311" title="NURSE PARTY! (tak trochu jiná transfúze vodkou.. ☺)" class="image">
-					<img src="/data/imgauto/9/3/11178373_10153375164673083_4380038975846132333_n.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1311" title="NURSE PARTY! (tak trochu jiná transfúze vodkou.. ☺)">NURSE PARTY! (tak trochu jiná transfúze vodkou.. ☺)</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=385">Two Faces Club</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>06/05/2015</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>?? Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1310" title="UNIVERSITY PARTY (S TEQUILOU, KAPITÁNEM, KŘÍDLY… V AKCI!)" class="image">
-					<img src="/data/imgauto/9/3/10385287_10153375159708083_4095670457421327859_n.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1310" title="UNIVERSITY PARTY (S TEQUILOU, KAPITÁNEM, KŘÍDLY… V AKCI!)">UNIVERSITY PARTY (S TEQUILOU, KAPITÁNEM, KŘÍDLY… V AKCI!)</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=385">Two Faces Club</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>05/05/2015<br/>21:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>?? Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1318" title="Oldies diskotéka 8.5.2015" class="image">
-					<img src="/data/imgauto/9/3/a113_.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1318" title="Oldies diskotéka 8.5.2015">Oldies diskotéka 8.5.2015</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=27">Deja*Vu</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>05/05/2015<br/>18:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>?? Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1287" title="★ Turnaj ve fotbálku ★ Table football tournament ★" class="image">
-					<img src="/data/imgauto/9/3/a108_.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1287" title="★ Turnaj ve fotbálku ★ Table football tournament ★">★ Turnaj ve fotbálku ★ Table football tournament ★</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=394">Yacht</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>03/05/2015<br/>14:30</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>ZDARMA</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1317" title="Mimořádná čtvrteční diskotéka 7.5.2015" class="image">
-					<img src="/data/imgauto/9/3/a112_.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1317" title="Mimořádná čtvrteční diskotéka 7.5.2015">Mimořádná čtvrteční diskotéka 7.5.2015</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=27">Deja*Vu</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>01/05/2015<br/>18:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>?? Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1285" title="HOUSE 4 U SPECIAL EDITION" class="image">
-					<img src="/data/imgauto/9/3/11149298_10152871866148111_3198181585448854596_n.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1285" title="HOUSE 4 U SPECIAL EDITION">HOUSE 4 U SPECIAL EDITION</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=381">Tabarin</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>30/04/2015<br/>22:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>?? Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1186" title="B2B @ 7.NEBE ★ Jaqullin vs Denysa / Thin &amp; Thick / Dazy vs Wolf " class="image">
-					<img src="/data/imgauto/9/3/22_.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1186" title="B2B @ 7.NEBE ★ Jaqullin vs Denysa / Thin &amp; Thick / Dazy vs Wolf ">B2B @ 7.NEBE ★ Jaqullin vs Denysa / Thin & Thick / Dazy vs Wolf </a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=11">7. nebe</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>30/04/2015<br/>21:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>70 Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=561" title="Jaroslav Hutka" class="image">
-					<img src="/data/imgauto/9/3/abcd.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=561" title="Jaroslav Hutka">Jaroslav Hutka</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=33">Fičák</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>30/04/2015<br/>20:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>220 Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1267" title="CELEBRATE MAY!" class="image">
-					<img src="/data/imgauto/9/3/11073278_10153299088233083_3789354419779074653_n.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1267" title="CELEBRATE MAY!">CELEBRATE MAY!</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=385">Two Faces Club</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>30/04/2015<br/>20:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>?? Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1270" title="HAHA CREW * BRNO MELODKA * VLNA TOUR" class="image">
-					<img src="/data/imgauto/9/3/3.png" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1270" title="HAHA CREW * BRNO MELODKA * VLNA TOUR">HAHA CREW * BRNO MELODKA * VLNA TOUR</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=63">Melodka</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>30/04/2015<br/>20:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>170/220 Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1238" title="DESSA (doomtree/US) + LETO (MMM/CZ) @ KABINET MÚZ" class="image">
-					<img src="/data/imgauto/9/3/15_.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1238" title="DESSA (doomtree/US) + LETO (MMM/CZ) @ KABINET MÚZ">DESSA (doomtree/US) + LETO (MMM/CZ) @ KABINET MÚZ</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=43">Kabinet můz</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>29/04/2015<br/>20:30</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>220/190 Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1266" title="FRESHMEN THE FINALE PARTY/TEQUILA ARMAGEDDON/" class="image">
-					<img src="/data/imgauto/9/3/11079630_10153304917058083_8117730286781041124_n.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1266" title="FRESHMEN THE FINALE PARTY/TEQUILA ARMAGEDDON/">FRESHMEN THE FINALE PARTY/TEQUILA ARMAGEDDON/</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=385">Two Faces Club</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>29/04/2015<br/>20:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>?? Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1265" title="UNIVERSITY PARTY (S TEQUILOU, KAPITÁNEM, KŘÍDLY… V AKCI!)" class="image">
-					<img src="/data/imgauto/9/3/20414_10153299110023083_6323636721265274288_n.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1265" title="UNIVERSITY PARTY (S TEQUILOU, KAPITÁNEM, KŘÍDLY… V AKCI!)">UNIVERSITY PARTY (S TEQUILOU, KAPITÁNEM, KŘÍDLY… V AKCI!)</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=385">Two Faces Club</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>28/04/2015<br/>20:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>?? Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1269" title="Momento (SLO) + Synaesthetics" class="image">
-					<img src="/data/imgauto/9/3/27_.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1269" title="Momento (SLO) + Synaesthetics">Momento (SLO) + Synaesthetics</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=63">Melodka</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>28/04/2015<br/>19:30</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>???</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1264" title="CRAZY MONDAY!" class="image">
-					<img src="/data/imgauto/9/3/11083621_10153299101458083_5048288850803905628_n1_.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1264" title="CRAZY MONDAY!">CRAZY MONDAY!</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=385">Two Faces Club</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>27/04/2015<br/>20:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>?? Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1268" title="PEPSI Night - Sonzich, Silent Forms, Jikry" class="image">
-					<img src="/data/imgauto/9/3/18_.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1268" title="PEPSI Night - Sonzich, Silent Forms, Jikry">PEPSI Night - Sonzich, Silent Forms, Jikry</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=63">Melodka</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>27/04/2015<br/>19:30</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>0 Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1286" title="Drum Surfing vol.1" class="image">
-					<img src="/data/imgauto/9/3/a107_.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1286" title="Drum Surfing vol.1">Drum Surfing vol.1</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=394">Yacht</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>26/04/2015<br/>21:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>ZDARMA</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1031" title="EX-TRACT Records /techno/" class="image">
-					<img src="/data/imgauto/9/3/11008826_10153157917774182_7774636492954952950_n.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1031" title="EX-TRACT Records /techno/">EX-TRACT Records /techno/</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=74">Perpetuum</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>25/04/2015<br/>21:30</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>?? Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1193" title="MARION THOMAS QUARTET (FRA)" class="image">
-					<img src="/data/imgauto/9/3/9.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1193" title="MARION THOMAS QUARTET (FRA)">MARION THOMAS QUARTET (FRA)</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=13">Alterna</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>25/04/2015<br/>20:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>0 Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=948" title="5. Havana Club Metro Cup 2015" class="image">
-					<img src="/data/imgauto/9/3/a86_.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=948" title="5. Havana Club Metro Cup 2015">5. Havana Club Metro Cup 2015</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=65">Metro</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>25/04/2015<br/>19:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>?? Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1204" title="OFICIÁLNÍ ELEKTRA AFTERPARTY" class="image">
-					<img src="/data/imgauto/9/3/11150832_10153246916279182_7677629488211053206_n.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1204" title="OFICIÁLNÍ ELEKTRA AFTERPARTY">OFICIÁLNÍ ELEKTRA AFTERPARTY</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=74">Perpetuum</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>25/04/2015<br/>05:30</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>?? Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1167" title="★★★ KALI/PETER PANN , PÁ 24/04/2015, SONO CENTRUM BRNO" class="image">
-					<img src="/data/imgauto/9/3/10411893_1002026023142521_5017443539905558806_n.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1167" title="★★★ KALI/PETER PANN , PÁ 24/04/2015, SONO CENTRUM BRNO">★★★ KALI/PETER PANN , PÁ 24/04/2015, SONO CENTRUM BRNO</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=92">Sono</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>24/04/2015<br/>21:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>250-499,- Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1237" title="Back To The Roots III. w/ ORION (dj set) @ Kabinet Muz" class="image">
-					<img src="/data/imgauto/9/3/91_.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1237" title="Back To The Roots III. w/ ORION (dj set) @ Kabinet Muz">Back To The Roots III. w/ ORION (dj set) @ Kabinet Muz</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=43">Kabinet můz</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>24/04/2015<br/>21:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>0 Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1150" title="BULLERBYNE @Eleven club: 24_4_2015" class="image">
-					<img src="/data/imgauto/9/3/aaaa.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1150" title="BULLERBYNE @Eleven club: 24_4_2015">BULLERBYNE @Eleven club: 24_4_2015</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=31">Eleven club</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>24/04/2015<br/>20:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>?? Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1249" title="BITVA KAPEL - FINÁLE 2015" class="image">
-					<img src="/data/imgauto/9/3/16_.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1249" title="BITVA KAPEL - FINÁLE 2015">BITVA KAPEL - FINÁLE 2015</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=61">M13</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>24/04/2015<br/>20:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>50 Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1261" title="Doga - křest CD + Komunál" class="image">
-					<img src="/data/imgauto/9/3/36_.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1261" title="Doga - křest CD + Komunál">Doga - křest CD + Komunál</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=63">Melodka</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>24/04/2015<br/>20:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>200 Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1262" title="MILK CHOCOLATE PARTY" class="image">
-					<img src="/data/imgauto/9/3/11082622_10153299096428083_4900266794969333365_n.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1262" title="MILK CHOCOLATE PARTY">MILK CHOCOLATE PARTY</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=385">Two Faces Club</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>24/04/2015<br/>20:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>?? Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1272" title="Electroswing Massacre vol. 4" class="image">
-					<img src="/data/imgauto/9/3/55_.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1272" title="Electroswing Massacre vol. 4">Electroswing Massacre vol. 4</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=64">Mersey</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>24/04/2015<br/>20:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>???</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1128" title="HOUSE 4 U BOAT OPENING" class="image">
-					<img src="/data/imgauto/9/3/1526549_10152792401583111_3383533129431354158_n.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1128" title="HOUSE 4 U BOAT OPENING">HOUSE 4 U BOAT OPENING</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=381">Tabarin</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>24/04/2015<br/>17:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span>?? Kč</span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=888" title="Elektra - John Digweed (UK) @Fleda: 24.4.2015" class="image">
-					<img src="/data/imgauto/9/3/1979574_10153006460528632_8109830493759562865_n.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=888" title="Elektra - John Digweed (UK) @Fleda: 24.4.2015">Elektra - John Digweed (UK) @Fleda: 24.4.2015</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=34">Fléda</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>24/04/2015</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span></span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-									<div class="item">
-				<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=690" title="PAVEL HELÁN" class="image">
-					<img src="/data/imgauto/9/3/010101011010101010101010110.jpg" />
-				</a>
-				<div class="texts">
-					<div class="column_left">
-						<h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=690" title="PAVEL HELÁN">PAVEL HELÁN</a></h2>
-					</div>
-					<div class="column_right">
-	                    <div class="info">
-							<div class="item">
-								<strong>Kde</strong><br />
-								<span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=33">Fičák</a></span>
-							</div>
-							<div class="item">
-								<strong>Kdy</strong><br />
-								<span>23/04/2015<br/>20:00</span>
-							</div>
-							<div class="item">
-								<strong>Vstup</strong><br />
-								<span></span>
-							</div>
-						</div>
-													<div class="clearer"></div>
-							<div class="ishistory">
-								Již proběhla							</div>
-											</div>
-				</div>
-			</div>
-					</div>
-		<div class="pagebar">
+                                    request.addParam('parent', data.parent);
+                                    request.addParam('column', data.sub);
+                                    request.addParam('value', this.options[this.selectedIndex].value);
+                                    request.send();
+                                });
+                            //]]></script>
+                            <div class="content">
+                                <div>
+                                    <div class="pagebar">
 
-		<div class="page_switch">
-						<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=events&amp;from=100" class="goright"></a>		<div class="inside">
-												<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=events&amp;from=0" class="active">1</a>
-																<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=events&amp;from=100" >2</a>
-																<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=events&amp;from=200" >3</a>
-																<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=events&amp;from=300" >4</a>
-																<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=events&amp;from=400" >5</a>
-																<a>...</a>
-			 													<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=events&amp;from=900" >10</a>
-									</div>
-			</div>
+                                        <div class="page_switch">
+                                            <a href="/podniky?filter%5Bcity%5D=Brno&amp;action=events&amp;from=100" class="goright"></a>		<div class="inside">
+                                                <a href="/podniky?filter%5Bcity%5D=Brno&amp;action=events&amp;from=0" class="active">1</a>
+                                                <a href="/podniky?filter%5Bcity%5D=Brno&amp;action=events&amp;from=100" >2</a>
+                                                <a href="/podniky?filter%5Bcity%5D=Brno&amp;action=events&amp;from=200" >3</a>
+                                                <a href="/podniky?filter%5Bcity%5D=Brno&amp;action=events&amp;from=300" >4</a>
+                                                <a href="/podniky?filter%5Bcity%5D=Brno&amp;action=events&amp;from=400" >5</a>
+                                                <a>...</a>
+                                                <a href="/podniky?filter%5Bcity%5D=Brno&amp;action=events&amp;from=900" >10</a>
+                                            </div>
+                                        </div>
 
-	<div class="max_items">
-		Stránkování:
-					<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=events&amp;from=0&amp;count=10" class="">
-				10
-			</a>
-					<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=events&amp;from=0&amp;count=20" class="">
-				20
-			</a>
-					<a href="/podniky?filter%5Bcity%5D=Brno&amp;action=events&amp;from=0&amp;count=40" class="">
-				40
-			</a>
-			</div>
+                                        <div class="max_items">
+                                            Stránkování:
+                                            <a href="/podniky?filter%5Bcity%5D=Brno&amp;action=events&amp;from=0&amp;count=10" class="">
+                                                10
+                                            </a>
+                                            <a href="/podniky?filter%5Bcity%5D=Brno&amp;action=events&amp;from=0&amp;count=20" class="">
+                                                20
+                                            </a>
+                                            <a href="/podniky?filter%5Bcity%5D=Brno&amp;action=events&amp;from=0&amp;count=40" class="">
+                                                40
+                                            </a>
+                                        </div>
 
-	<div class="clearer"></div>
-</div>
-	</div>
-			</div>
-		</div>
-	</div>
-				</div>
-						</div>
-</div>
-<div id="fixed_right">
-	<a target="_blank" href="https://plus.google.com/u/0/b/117084932134713446677/117084932134713446677"><img src="/layout/img/theme/ico_social_plus.jpg" alt="Google+" /> <span>Google+</span></a>
-	<a target="_blank" href="https://www.facebook.com/pages/The-Nightlife/238962236313168?fref=ts"><img src="/layout/img/theme/ico_social_like.jpg" alt="Facebook" /> <span>Facebook</span></a>
-	<a target="_blank" href="https://twitter.com/TheNightlifeCZ"><img src="/layout/img/theme/ico_social_tweet.jpg" alt="Twitter" /> <span>Twitter</span></a>
-	<a target="_blank" href="https://www.youtube.com/channel/UCdP-kIXYCLdve-6lcnpjVaQ"><img src="/layout/img/theme/ico_social_yt.jpg" alt="You Tube" /> <span>You Tube</span></a>
-</div>
-<div id="fixed_left">
-	<a target="_blank" href="http://www.top1drive.cz/"><img src="/layout/img/theme/taxi_link_1.jpg" alt="Top1 Drive" /></a>
-	<a target="_blank" href="http://www.top1taxi.cz/"><img src="/layout/img/theme/taxi_link_2.jpg" alt="Top1 Taxi" /></a>
-	<div class="phone">+420 844 110 110</div>
-</div>
-<div id="site_footer_top">
-	<div class="inside">
-								</div>
-</div>
-<div id="site_footer_center">
-	<div class="inside">
-					<div class="sidebox banner box9">
-	<div class="inside">
-																	<a href="/" target="_self"><img src="/data/imgauto/2/0/logo_footer.png" alt="" /></a>				</div>
-</div>			</div>
-</div>
-<div id="site_footer_bottom">
-	<div class="inside">
-					<div class="sidebox text0 box5">
-	<div class="inside">
-				<h2>O nás</h2>
+                                        <div class="clearer"></div>
+                                    </div>
+                                    <div class="clubs_list">
+                                        <div class="item">
+                                            <a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=565" title="Jazzová legenda - JAROMÍR HNILIČKA + hosté...jam session" class="image">
+                                                <img src="/data/imgauto/9/3/jjjjjj.jpg" />
+                                            </a>
+                                            <div class="texts">
+                                                <div class="column_left">
+                                                    <h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=565" title="Jazzová legenda - JAROMÍR HNILIČKA + hosté...jam session">Jazzová legenda - JAROMÍR HNILIČKA + hosté...jam session</a></h2>
+                                                </div>
+                                                <div class="column_right">
+                                                    <div class="info">
+                                                        <div class="item">
+                                                            <strong>Kde</strong><br />
+                                                            <span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=33">Fičák</a></span>
+                                                        </div>
+                                                        <div class="item">
+                                                            <strong>Kdy</strong><br />
+                                                            <span>28/05/2015<br/>20:00</span>
+                                                        </div>
+                                                        <div class="item">
+                                                            <strong>Vstup</strong><br />
+                                                            <span>200 Kč</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1210" title="KISS Forever Band (Hu) &amp; ALICE COOPER Revival Band Bratislava @S" class="image">
+                                                <img src="/data/imgauto/9/3/10481686_1624253484455606_7297483714494360103_n.png" />
+                                            </a>
+                                            <div class="texts">
+                                                <div class="column_left">
+                                                    <h2><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail-event&amp;id=1210" title="KISS Forever Band (Hu) &amp; ALICE COOPER Revival Band Bratislava @S">KISS Forever Band (Hu) & ALICE COOPER Revival Band Bratislava @S</a></h2>
+                                                </div>
+                                                <div class="column_right">
+                                                    <div class="info">
+                                                        <div class="item">
+                                                            <strong>Kde</strong><br />
+                                                            <span><a href="/podniky?filter%5Bcity%5D=Brno&amp;action=detail&amp;id=92">Sono</a></span>
+                                                        </div>
+                                                        <div class="item">
+                                                            <strong>Kdy</strong><br />
+                                                            <span>30/05/2015<br/>20:00</span>
+                                                        </div>
+                                                        <div class="item">
+                                                            <strong>Vstup</strong><br />
+                                                            <span>290,- Kč</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
 
-<p>Kde se vlastně vzal projekt TheNightLife? Z jednoduché myšlenky a ještě jednodušší otázky. "Kam dneska vyrazíme?" Kolikrát jste si s partou tuhle otázku už položili? A nás napadlo jak jednoduše tuto otázku vyřešit. Proč nemít všechny informace na jednom místě? Mít tak možnost nemuset googlovat a zjišťovat webové adresy klubů a na nich hledat informace o akcích jež budou pořádat. Co když bude existovat místo, kde všechny tyto informace budou na jednom místě. Vše pěkně seřazené, s hodnocením a nachystané spolu s fulltextovým vyhledávačem pro každého, kdo bude chtít vědět co se kde děje. A právě to se tým TheNightLife pokouší zrealizovat. Jsme tu abychom poskytli informaci tomu kdo ji potřebuje. Mnoho projektů podobného typu zkrachovalo právě na tom, že uzurpovali návštěvníka webu potřebou složitých registrací a hromadou otravujících reklam, jež musel návštěvník "odkliknout" aby se dostal k požadovanému obsahu, který ve finále nestál za nic. Chceme se z těchto chyb poučit a dát Vám něco víc. Chceme Vám pomoci tvořit VÁŠ noční život...Váš Nightlife!</p>
+                                    </div>
+                                    <div class="pagebar">
 
-	</div>
-</div><div class="sidebox newssign box10">
-	<div class="inside">
-		<form method="post" action="">
-			<input type="hidden" name="newssign" value="1" />
-			<h2>Newsletter:</h2>
-			<p>Přihlaste se chcete-li dostávat e-mailem nejnovější informace.</p>
-			<input class="text" type="text" name="email" placeholder="Váš e-mail" />
-			<button type="submit" class="submit" title="Odeslat"></button>
-		</form>		
-	</div>
-</div>
+                                        <div class="page_switch">
+                                            <a href="/podniky?filter%5Bcity%5D=Brno&amp;action=events&amp;from=100" class="goright"></a>		<div class="inside">
+                                                <a href="/podniky?filter%5Bcity%5D=Brno&amp;action=events&amp;from=0" class="active">1</a>
+                                                <a href="/podniky?filter%5Bcity%5D=Brno&amp;action=events&amp;from=100" >2</a>
+                                                <a href="/podniky?filter%5Bcity%5D=Brno&amp;action=events&amp;from=200" >3</a>
+                                                <a href="/podniky?filter%5Bcity%5D=Brno&amp;action=events&amp;from=300" >4</a>
+                                                <a href="/podniky?filter%5Bcity%5D=Brno&amp;action=events&amp;from=400" >5</a>
+                                                <a>...</a>
+                                                <a href="/podniky?filter%5Bcity%5D=Brno&amp;action=events&amp;from=900" >10</a>
+                                            </div>
+                                        </div>
 
-			</div>
-</div>
-<div id="site_copy">
-	<div class="inside">
-		© 2015, The Night Life
-		<a href="http://www.4every1.cz" title="Vytvořilo 4every1 s.r.o." class="author" rel="nofollow" target="_blank">4every1 s.r.o.</a>
-	</div>
-</div>
+                                        <div class="max_items">
+                                            Stránkování:
+                                            <a href="/podniky?filter%5Bcity%5D=Brno&amp;action=events&amp;from=0&amp;count=10" class="">
+                                                10
+                                            </a>
+                                            <a href="/podniky?filter%5Bcity%5D=Brno&amp;action=events&amp;from=0&amp;count=20" class="">
+                                                20
+                                            </a>
+                                            <a href="/podniky?filter%5Bcity%5D=Brno&amp;action=events&amp;from=0&amp;count=40" class="">
+                                                40
+                                            </a>
+                                        </div>
+
+                                        <div class="clearer"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="fixed_right">
+            <a target="_blank" href="https://plus.google.com/u/0/b/117084932134713446677/117084932134713446677"><img src="/layout/img/theme/ico_social_plus.jpg" alt="Google+" /> <span>Google+</span></a>
+            <a target="_blank" href="https://www.facebook.com/pages/The-Nightlife/238962236313168?fref=ts"><img src="/layout/img/theme/ico_social_like.jpg" alt="Facebook" /> <span>Facebook</span></a>
+            <a target="_blank" href="https://twitter.com/TheNightlifeCZ"><img src="/layout/img/theme/ico_social_tweet.jpg" alt="Twitter" /> <span>Twitter</span></a>
+            <a target="_blank" href="https://www.youtube.com/channel/UCdP-kIXYCLdve-6lcnpjVaQ"><img src="/layout/img/theme/ico_social_yt.jpg" alt="You Tube" /> <span>You Tube</span></a>
+        </div>
+        <div id="fixed_left">
+            <a target="_blank" href="http://www.top1drive.cz/"><img src="/layout/img/theme/taxi_link_1.jpg" alt="Top1 Drive" /></a>
+            <a target="_blank" href="http://www.top1taxi.cz/"><img src="/layout/img/theme/taxi_link_2.jpg" alt="Top1 Taxi" /></a>
+            <div class="phone">+420 844 110 110</div>
+        </div>
+        <div id="site_footer_top">
+            <div class="inside">
+            </div>
+        </div>
+        <div id="site_footer_center">
+            <div class="inside">
+                <div class="sidebox banner box9">
+                    <div class="inside">
+                        <a href="/" target="_self"><img src="/data/imgauto/2/0/logo_footer.png" alt="" /></a>				</div>
+                </div>			</div>
+        </div>
+        <div id="site_footer_bottom">
+            <div class="inside">
+                <div class="sidebox text0 box5">
+                    <div class="inside">
+                        <h2>O nás</h2>
+
+                        <p>Kde se vlastně vzal projekt TheNightLife? Z jednoduché myšlenky a ještě jednodušší otázky. "Kam dneska vyrazíme?" Kolikrát jste si s partou tuhle otázku už položili? A nás napadlo jak jednoduše tuto otázku vyřešit. Proč nemít všechny informace na jednom místě? Mít tak možnost nemuset googlovat a zjišťovat webové adresy klubů a na nich hledat informace o akcích jež budou pořádat. Co když bude existovat místo, kde všechny tyto informace budou na jednom místě. Vše pěkně seřazené, s hodnocením a nachystané spolu s fulltextovým vyhledávačem pro každého, kdo bude chtít vědět co se kde děje. A právě to se tým TheNightLife pokouší zrealizovat. Jsme tu abychom poskytli informaci tomu kdo ji potřebuje. Mnoho projektů podobného typu zkrachovalo právě na tom, že uzurpovali návštěvníka webu potřebou složitých registrací a hromadou otravujících reklam, jež musel návštěvník "odkliknout" aby se dostal k požadovanému obsahu, který ve finále nestál za nic. Chceme se z těchto chyb poučit a dát Vám něco víc. Chceme Vám pomoci tvořit VÁŠ noční život...Váš Nightlife!</p>
+
+                    </div>
+                </div><div class="sidebox newssign box10">
+                    <div class="inside">
+                        <form method="post" action="">
+                            <input type="hidden" name="newssign" value="1" />
+                            <h2>Newsletter:</h2>
+                            <p>Přihlaste se chcete-li dostávat e-mailem nejnovější informace.</p>
+                            <input class="text" type="text" name="email" placeholder="Váš e-mail" />
+                            <button type="submit" class="submit" title="Odeslat"></button>
+                        </form>		
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="site_copy">
+            <div class="inside">
+                © 2015, The Night Life
+                <a href="http://www.4every1.cz" title="Vytvořilo 4every1 s.r.o." class="author" rel="nofollow" target="_blank">4every1 s.r.o.</a>
+            </div>
+        </div>
 
 
 
-<script type="text/javascript" src="//use.typekit.net/fgf0tmu.js"></script>
-	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+        <script type="text/javascript" src="//use.typekit.net/fgf0tmu.js"></script>
+        <script type="text/javascript">try {
+        Typekit.load();
+    } catch (e) {
+    }</script>
 
-</body>
+    </body>
 </html>

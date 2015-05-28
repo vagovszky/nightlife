@@ -22,12 +22,12 @@ Note: All the code will be programmed in PHP
 - Snippet of html - list item:
 ```html
 <div class="item">
-    <a href="{href}" title="{title}" class="image">
-        <img src="{img_url}" />
+    <a href="{detail_url}" title="{title}" class="image">
+        <img src="{img_url_small}" />
     </a>
     <div class="texts">
         <div class="column_left">
-            <h2><a href="{detail_url}" title="{detail_title}">{detail_label}</a></h2>
+            <h2><a href="{detail_url}" title="{title}">{title}</a></h2>
         </div>
         <div class="column_right">
             <div class="info">
@@ -54,15 +54,95 @@ Note: All the code will be programmed in PHP
 	- See http://www.the-night-life.cz/podniky?action=detail-event&id=1210
 	- or http://www.the-night-life.cz/jazzova-legenda-jaromir-hnilicka-hostejam-session-3
 	- !!! Different format of URL !!!
-- **DEFINE PARSING RULES FOR {detail_url} - TBD IN SEPARATE DOCUMENT**
+- Snippet of html - detail:
+```html
+<div class="part_head">
+    <div class="left_side">
+        <div class="image">
+            <a href="{img_big_url}" class="CeraBox">
+                <img src="{img_url}" alt="{title}" />
+            </a>
+        </div>
+        <div class="contact">
+            <div class="left_s">
+                <div class="email">
+                    {email}
+                </div>
+                <div class="address">
+                    {street}<br />
+                    {city} 
+                </div>
+                <div class="web">
+                    <a href="{url_web}">Odkaz na web podniku</a>
+                </div>
+            </div>
+            <div class="right_s">
+                <div class="phone">
+                    {phone}
+                </div>
+            </div>
+        </div>
+        <div class="map">
+            <iframe src="{map_iframe_url}" width="390" height="294" frameborder="0" style="border:0"></iframe>
+        </div>
+    </div>
+    <div class="right_side">
+        <div class="main">
+            <div class="title">
+                <div class="info">
+                    <div class="item">
+                        <strong>Kde</strong><br />
+                        <span><a href="{place_url_detail}">{place}</a></span>
+                    </div>
+                    <div class="item">
+                        <strong>Kdy</strong><br />
+                        <span>{date}<br/>{time}</span>
+                    </div>
+                    <div class="item">
+                        <strong>Vstup</strong><br />
+                        <span>{entry_amount} Kč</span>
+                    </div>
+
+                </div>
+                <h1>{title}</h1>
+                <h2>{pub_activity}</h2>
+            </div>
+            <div class="desc apply-ui-scrollbar">
+                {description}
+            </div>
+            <div class="foot">
+                <a class="drink_list" href="{drink_list_url}">
+                    Nápojový <br />lístek
+                </a>
+                <div class="social">
+                    <a href="{social_url}" target="_blank" class="facebook"></a>
+                </div>
+            </div>
+        </div>
+        <div class="bottom_left">
+            <h2>Místní dj's</h2>
+            <div class="inside">
+                <p>Aktuální informace na webové stránce podniku.</p>
+            </div>
+        </div>
+        <div class="bottom_right">
+            <h2>Akční nabídka</h2>
+            <div class="inside">
+                <p>Podnik nabízí speciální nabídky v rámci akcí.</p>
+            </div>
+        </div>
+    </div>
+</div>
+```
 
 #### 2) Use Doctrine ORM to store data to DB
 
 - for kick off - MySQL
 - Use Entities defined in **module/Application/src/Entity**
-- Two tables:
-    - **events-list** _The list of events_
-    - **events-details** _Details about each event from the events-list_
+- One table:
+    - **events** _The list of events_
+- Table columns:
+    - TBD
 
 #### 3) Populate a XML (to be specified)
 

@@ -35,5 +35,33 @@ return array(
                 ),
             ),
         ),
-    )
+    ),
+    'service_manager' => array(
+        'invokables' => array(
+            'PHPHtmlParser\Dom' => 'PHPHtmlParser\Dom',
+        ),
+        'factories' => array(
+            'Application\Service\Parser' => 'Application\Factory\ParserFactory',
+        ),
+        'abstract_factories' => array(
+            'Zend\Log\LoggerAbstractServiceFactory',
+        ),
+    ),
+    'sources' => array(
+        'base_url' => 'http://www.the-night-life.cz',
+        'list_url' => 'http://www.the-night-life.cz/udalosti?filter[city]=Brno&count=100'
+    ),
+    'log' => array(
+        'Application\Logger' => array(
+            'writers' => array(
+                array(
+                    'name' => 'stream',
+                    'priority' => 1000,
+                    'options' => array(
+                        'stream' => 'php://output',
+                    ),
+                ),
+            ),
+        ),
+    ),
 );
