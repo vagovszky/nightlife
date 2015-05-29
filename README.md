@@ -18,7 +18,7 @@ Note: All the code will be programmed in PHP
 #### 1) Downloading & parsing the html content by  using _paquettg/php-html-parser_
 
 - Download the list:
-- http://www.the-night-life.cz/udalosti?filter[city]=Brno&count=100
+- http://www.the-night-life.cz/udalosti?filter[city]=Brno&count=50
 - Snippet of html - list item:
 ```html
 <div class="item">
@@ -49,7 +49,7 @@ Note: All the code will be programmed in PHP
 </div>
 ```
 - for whole list **we have to follow** (click) **all links** in {detail_url}
-- **We have to download all detail pages from previous step - !!100 requests!!**
+- **We have to download all detail pages from previous step - !!50 requests!!**
 - Exapmple of detail page
 	- See http://www.the-night-life.cz/podniky?action=detail-event&id=1210
 	- or http://www.the-night-life.cz/jazzova-legenda-jaromir-hnilicka-hostejam-session-3
@@ -140,7 +140,7 @@ Note: All the code will be programmed in PHP
 - for kick off - MySQL
 - Use Entities defined in **module/Application/src/Entity**
 - One table:
-    - **events** _The list of events_
+    - **event** _The list of events_
 - Table columns:
     - TBD
 
