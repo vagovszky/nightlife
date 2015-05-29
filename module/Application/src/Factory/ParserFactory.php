@@ -13,11 +13,13 @@ class ParserFactory implements FactoryInterface {
         $dom = $serviceLocator->get('PHPHtmlParser\Dom');
         $config = $serviceLocator->get('Config');
         $logger = $serviceLocator->get('Application\Logger');
+        $filter = $serviceLocator->get('InputFilterManager')->get('Application\Filter\EventFilter');
         
         $parser = new Parser($em, $dom);
         $parser->setBaseUrl($config['sources']['baseUrl']);
         $parser->setListUrl($config['sources']['listUrl']);
         $parser->setLogger($logger);
+        $parser->setInputFilter($filter);
         
         return $parser;
     }

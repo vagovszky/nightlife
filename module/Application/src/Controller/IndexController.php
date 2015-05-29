@@ -17,6 +17,15 @@ class IndexController extends AbstractActionController {
         if ($console instanceof Virtual) {
             return "No console support !!!";
         }
+        
+        /*
+        $data = array();
+        $data["title"] = "CMYK";
+        $parser = $this->getServiceLocator()->get('Application\Service\Parser');
+        $filter = $parser->getInputFilter();
+        $filter->setData($data);
+        var_dump($filter->isValid());
+        */
         $this->getServiceLocator()->get('Application\Service\Parser')->parse();
     }
 

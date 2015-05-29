@@ -64,4 +64,9 @@ return array(
             ),
         ),
     ),
+    'input_filters' => array(
+        'invokables' => array(
+            'Application\Filter\EventFilter' => 'Application\Filter\EventFilter',
+         ),
+    ),
 );
