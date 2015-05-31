@@ -21,6 +21,8 @@ class Parser implements ParserInterface, LoggerAwareInterface, InputFilterAwareI
     private $logger;
     private $inputFilter;
     
+    private $debugMode = false;
+    
     const PARSER_ENTITY = 'Application\Entity\Event';
     
     public function __construct(EntityManagerInterface $em, Dom $dom){
@@ -47,6 +49,11 @@ class Parser implements ParserInterface, LoggerAwareInterface, InputFilterAwareI
         $this->inputFilter = $inputFilter;
         return $this;
     }
+    
+    public function setDebugMode($debugMode = true){
+        $this->debugMode = $debugMode;
+        return $this;
+    }
 
     public function getInputFilter(){
         return $this->inputFilter;
@@ -54,19 +61,28 @@ class Parser implements ParserInterface, LoggerAwareInterface, InputFilterAwareI
     
     public function parse(){
         $this->truncateTable();
+        $result = new \stdClass();
+        $result->ok = 0;
+        $result->fail = 0;
         foreach($this->getUrlList() as $url){
             $fullUrlDecoded = $this->prepareUrl($url);
-            $this->parseDetail($fullUrlDecoded);
+            if($this->parseDetail($fullUrlDecoded)){
+                $result->ok++;
+            }else{
+                $result->fail++;
+            }
         }
+        return $result;
     }
     
     private function parseDetail($url){
         $this->logger->log(Logger::INFO, "Parsing url: ".$url);
         try{
             $this->dom->load($url);
-            // The Map - core of whole parser
+            // The Map - the core of whole parser
             $detailContent = $this->dom->find('body .site_wrap #site_content .content_subpage .detail .part_head');
             $event = array(
+                "url" => trim($url),
                 "img_big_url" => $this->prepareUrl(trim($detailContent->find('.left_side .image a')->getAttribute('href'))),
                 "img_url" => $this->prepareUrl(trim($detailContent->find('.left_side .image a img')->getAttribute('src'))),
                 "title" => trim($detailContent->find('.right_side .main .title h1')->text),
@@ -82,18 +98,20 @@ class Parser implements ParserInterface, LoggerAwareInterface, InputFilterAwareI
                 "social_url" => $this->prepareUrl(trim($detailContent->find('.right_side .main .foot .social a')->getAttribute('href')))
             );
             
-            $datetime = explode("<br />", trim($detailContent->find('.right_side .main .title .info .item')[1]->find('span')->innerHtml)); // date + time
-            $address = explode("<br />", trim($detailContent->find('.left_side .contact .left_s .address')->innerHtml)); // street + city
+            $datetime = preg_split('/(<br[^>]*>){1,2}/i', trim($detailContent->find('.right_side .main .title .info .item')[1]->find('span')->innerHtml)); // date + time
+            $address = preg_split('/(<br[^>]*>){1,2}/i', trim($detailContent->find('.left_side .contact .left_s .address')->innerHtml)); // street + city
             
             $event["date"] = (isset($datetime[0])) ? \DateTime::createFromFormat('d/m/Y',trim($datetime[0]))->format("Y-m-d") : '';
             $event["time"] = (isset($datetime[1])) ? \DateTime::createFromFormat('H:i', trim($datetime[1]))->format("H:i:s") : '';
             $event["street"] = (isset($address[0])) ? trim($address[0]) : '';
-            $event["city"] = (isset($address[0])) ? trim($address[0]) : '';
+            $event["city"] = (isset($address[1])) ? trim($address[1]) : '';
     
             $this->saveDetail($event);
             
+            return true;
         }catch(\Exception $e){
-            $this->logger->log(Logger::ERR, "Error while loading the detail of an event: ".$e->getMessage());
+            $this->logger->log(Logger::ERR, "Error while loading / parsing the detail of an event: ".$e->getMessage());
+            return false;
         }
     }
     
@@ -102,7 +120,9 @@ class Parser implements ParserInterface, LoggerAwareInterface, InputFilterAwareI
         $inputFilter->setData($event);
         if($inputFilter->isValid()){
             try{
-                $eventEntity = $this->em->getRepository(self::PARSER_ENTITY);
+                //@TODO find better way howto return new instance of the entity
+                $entityName = self::PARSER_ENTITY;
+                $eventEntity = new $entityName; //$this->em->getRepository(self::PARSER_ENTITY);
                 $eventEntity->populate($inputFilter->getValues());
                 $this->em->persist($eventEntity);
                 $this->em->flush();
@@ -130,20 +150,26 @@ class Parser implements ParserInterface, LoggerAwareInterface, InputFilterAwareI
             $connection->commit();
         }
         catch (\Exception $e) {
-            $this->logger->log(Logger::ALERT, "Can not truncate the events table: ".$e->getMessage());
+            $this->logger->log(Logger::EMERG, "Can not truncate the events table: ".$e->getMessage());
             $connection->rollback();
             throw new ParserException('Can not truncate the events table: '.$e->getMessage());
         }
     }
     
     private function getUrlList(){
+        if($this->debugMode){ 
+            return array(
+                __DIR__."/../../../../data/source-examples/event-001.html",
+                __DIR__."/../../../../data/source-examples/event-002.html"
+            );
+        }
         $urls = array();
         $this->logger->log(Logger::INFO, "Loading list of events from url: ".$this->listUrl);
         try{
             $this->dom->load($this->listUrl);
             $items = $this->dom->find('.content div .clubs_list .item .texts .column_left h2 a'); // The Detail URL selector
         }catch(\Exception $e){
-            $this->logger->log(Logger::ALERT, "Error while loading the list of events: ".$e->getMessage());
+            $this->logger->log(Logger::EMERG, "Error while loading the list of events: ".$e->getMessage());
             throw new ParserException("Error while loading the list of events: ".$e->getMessage());
         }
         foreach($items as $item){
@@ -154,7 +180,7 @@ class Parser implements ParserInterface, LoggerAwareInterface, InputFilterAwareI
     
     private function prepareUrl($url){
         $decodedUrl = (!empty($url)) ? html_entity_decode(rawurldecode($url)) : $url;
-        if (!empty($decodedUrl) && is_string($decodedUrl) && (strlen($decodedUrl) > 0) && substr($decodedUrl, 0, 1) === '/'){
+        if (!empty($decodedUrl) && is_string($decodedUrl) && (strlen($decodedUrl) > 0) && substr($decodedUrl, 0, 1) === '/' && !file_exists($url)){
             return $this->baseUrl.$decodedUrl;
         }else{
             return $decodedUrl;

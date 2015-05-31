@@ -6,6 +6,44 @@ class EventFilter extends InputFilter
 {
     public function init()
     {
+        // url
+        $this->add(array(
+                'name' => 'url',
+                'required' => false,
+                'allow_empty' => true,
+                'filters' => array(
+                    array('name' => 'StringTrim'),
+                ),
+                'validators' => array(
+                    array( 'name' => 'StringLength', 'options' => array('max' => 255),
+                ),
+        )));
+        // title
+        $this->add(array(
+                'name' => 'title',
+                'required' => true,
+                'allow_empty' => false,
+                'filters' => array(
+                    array('name' => 'StringTrim'),
+                ),
+                'validators' => array(
+                    array( 'name' => 'StringLength', 'options' => array('max' => 255),
+                ),
+        )));
+        // description
+        $this->add(array(
+                'name' => 'description',
+                'required' => true,
+                'allow_empty' => true,
+                'filters' => array(
+                    array('name' => 'StringTrim'),
+                    array('name' => 'StripTags'), // remove HTML tags
+                    //array('name' => 'HtmlEntities', 'options' => array('quotestyle' => ENT_COMPAT)),
+                ),
+                'validators' => array(
+                    array( 'name' => 'StringLength', 'options' => array('max' => 65535),
+                ),
+        )));
         // img_big_url
         $this->add(array(
                 'name' => 'img_big_url',
@@ -30,18 +68,6 @@ class EventFilter extends InputFilter
                     array( 'name' => 'StringLength', 'options' => array('max' => 255),
                 ),
         )));
-        // title
-        $this->add(array(
-                'name' => 'title',
-                'required' => true,
-                'allow_empty' => false,
-                'filters' => array(
-                    array('name' => 'StringTrim'),
-                ),
-                'validators' => array(
-                    array( 'name' => 'StringLength', 'options' => array('max' => 255),
-                ),
-        )));
         // email
         $this->add(array(
                 'name' => 'email',
@@ -51,7 +77,7 @@ class EventFilter extends InputFilter
                     array('name' => 'StringTrim'),
                 ),
                 'validators' => array(
-                    array( 'name' => 'StringLength', 'options' => array('max' => 255)),
+                    array( 'name' => 'StringLength', 'options' => array('max' => 100)),
                     array( 'name' => 'EmailAddress', 'options' => array('domain' => false)),
                 ),
         ));
@@ -124,19 +150,6 @@ class EventFilter extends InputFilter
                     array( 'name' => 'IsInt',
                 ),
         )));
-        // description
-        $this->add(array(
-                'name' => 'description',
-                'required' => true,
-                'allow_empty' => true,
-                'filters' => array(
-                    array('name' => 'StringTrim'),
-                    array('name' => 'HtmlEntities', 'options' => array('quotestyle' => ENT_QUOTES)),
-                ),
-                'validators' => array(
-                    array( 'name' => 'StringLength', 'options' => array('max' => 65535),
-                ),
-        )));
         // drink_list_url
         $this->add(array(
                 'name' => 'drink_list_url',
@@ -181,7 +194,7 @@ class EventFilter extends InputFilter
         )));
         // street
         $this->add(array(
-                'name' => 'place',
+                'name' => 'street',
                 'required' => false,
                 'allow_empty' => true,
                 'filters' => array(
@@ -193,14 +206,14 @@ class EventFilter extends InputFilter
         )));
         // city
         $this->add(array(
-                'name' => 'place',
+                'name' => 'city',
                 'required' => false,
                 'allow_empty' => true,
                 'filters' => array(
                     array('name' => 'StringTrim'),
                 ),
                 'validators' => array(
-                    array( 'name' => 'StringLength', 'options' => array('max' => 255),
+                    array( 'name' => 'StringLength', 'options' => array('max' => 100),
                 ),
         )));
     }

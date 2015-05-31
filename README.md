@@ -3,7 +3,7 @@
 ## Objective
 
 1. Download & parse the html content **(completed)**
-2. Store parsed data to DB (optional) **(in progress)**
+2. Store parsed data to DB (optional) **(completed)**
 3. Populate a XML (to be specified)
 4. Expose the XML file
 5. Usage, tuning, deployment, terms of use

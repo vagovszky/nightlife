@@ -47,9 +47,12 @@ return array(
             'Zend\Log\LoggerAbstractServiceFactory',
         ),
     ),
-    'sources' => array(
-        'baseUrl' => 'http://www.the-night-life.cz',
-        'listUrl' => 'http://www.the-night-life.cz/udalosti?filter[city]=Brno&count=10'
+    'parser' => array(
+        'sources' => array(
+            'baseUrl' => 'http://www.the-night-life.cz',
+            'listUrl' => 'http://www.the-night-life.cz/udalosti?filter[city]=Brno&count=10'
+        ),
+        'debugMode' => false,
     ),
     'log' => array(
         'Application\Logger' => array(

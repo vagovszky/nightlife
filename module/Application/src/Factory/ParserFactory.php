@@ -16,8 +16,9 @@ class ParserFactory implements FactoryInterface {
         $filter = $serviceLocator->get('InputFilterManager')->get('Application\Filter\EventFilter');
         
         $parser = new Parser($em, $dom);
-        $parser->setBaseUrl($config['sources']['baseUrl']);
-        $parser->setListUrl($config['sources']['listUrl']);
+        $parser->setBaseUrl($config['parser']['sources']['baseUrl']);
+        $parser->setListUrl($config['parser']['sources']['listUrl']);
+        $parser->setDebugMode($config['parser']['debugMode']);
         $parser->setLogger($logger);
         $parser->setInputFilter($filter);
         
