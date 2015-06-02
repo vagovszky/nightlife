@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<ARTICLES>
+
+    <ARTICLE_ITEM>
+        <ID>unikátní a neměnné označení příspěvku. Např: 0001</ID>
+        <PEREX>Krátký úvodník, který se zobrazuje v těle článku. Max. délka = 225 znaků</PEREX>
+        <PREVIEW>Upoutávka článku - zobrazí se ve výpisech článků jako podnadpis. Max. délka 225 znaků.</PREVIEW>
+        <TITLE>titulek, H1, meta title</TITLE>
+        <CONTENT>
+        Tělo článku. Jsou podporovány základní html tagy. Pro jejich úspěšný import je potřeba uzavřít obsah javascript paramatrem CDATA. Příklad:
+        <![CDATA[
+  for (i=0; i < 10; $++)
+  {
+    document.writeln("<p>Zde má být obsah článku, který má podporovat základní html tagy pro formátování textu.</p>
+    <h2>Test nadpisu h2</h2>
+    <p>Normální text</p>
+    <h3>Test nadpisu h3</h3>
+    <p>Normální text se seznamen 
+     <ul>
+      <li>položka 1</li>
+      <li>položka 2</li>
+     </ul>
+     Tady pokračuje normální text.
+     <span  style="color: red; font-size: 150 %;">Tento text nebude červený</span>.
+     </p> ");
+  }
+]]>
+        </CONTENT>
+        <IMGURL>URL k hlavnímu obrázku článku (ideální rozměr 300x300 px)</IMGURL>
+        <DATE_DISPLAY_FROM>DD-MM-YYYY HH:MM:SS</DATE_DISPLAY_FROM>
+        <DATE_DISPLAY_TO>DD-MM-YYYY HH:MM:SS</DATE_DISPLAY_TO>
+        <EVENT>
+            <DATE_FROM>DD-MM-YYYY HH:MM:SS</DATE_FROM>
+            <DATE_TO>DD-MM-YYYY HH:MM:SS</DATE_TO>
+            <PRICE_INFO>Např: "Vstupné 350 Kč" (informace by měla být krátká do cca 20 znaků)</PRICE_INFO>
+            <URL>odkaz směřující na online rezervaci</URL>
+            <ADDRESS>Ulice č.p., Město</ADDRESS>
+        </EVENT>
+        <PHOTOGALLERY>
+            <IMGURL>http://zdrojfoto.cz/obrazek-fotogalerie-1.jpg</IMGURL>
+            <IMGURL>http://zdrojfoto.cz/obrazek-fotogalerie-2.jpg</IMGURL>
+        </PHOTOGALLERY>
+    </ARTICLE_ITEM>
+    
+</ARTICLES>

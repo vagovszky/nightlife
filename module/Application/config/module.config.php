@@ -19,6 +19,15 @@ return array(
                         )
                     )
                 ),
+                'xml' => array(
+                    'options' => array(
+                        'route' => 'xml',
+                        'defaults' => array(
+                            'controller' => 'Application\Controller\Index',
+                            'action' => 'xml'
+                        )
+                    )
+                ),
             )
         )
     ),
@@ -39,9 +48,11 @@ return array(
     'service_manager' => array(
         'invokables' => array(
             'PHPHtmlParser\Dom' => 'PHPHtmlParser\Dom',
+            'XMLWriter' => 'XMLWriter'
         ),
         'factories' => array(
             'Application\Service\Parser' => 'Application\Factory\ParserFactory',
+            'Application\Service\XmlGenerator' => 'Application\Factory\XmlGeneratorFactory'
         ),
         'abstract_factories' => array(
             'Zend\Log\LoggerAbstractServiceFactory',

@@ -4,7 +4,7 @@
 
 1. Download & parse the html content **(completed)**
 2. Store parsed data to DB (optional) **(completed)**
-3. Populate a XML (to be specified)
+3. Populate a XML (to be specified) **(completed)**
 4. Expose the XML file
 5. Usage, tuning, deployment, terms of use
 
@@ -142,11 +142,83 @@ Note: All the code will be programmed in PHP
 - One table:
     - **event** _The list of events_
 - Table columns:
-    - TBD
+
+```sql
+CREATE TABLE `event` (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  url varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  title varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  description text COLLATE utf8_unicode_ci,
+  img_big_url varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  img_url varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  email varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  url_web varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  phone varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
+  map_iframe_url text COLLATE utf8_unicode_ci,
+  place_url_detail varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  place varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  entry_amount int(11) DEFAULT NULL,
+  drink_list_url varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  social_url varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `date` date DEFAULT NULL,
+  `time` time DEFAULT NULL,
+  street varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  city varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (id),
+  KEY idx_url (url),
+  KEY idx_title (title)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+```
 
 #### 3) Populate a XML (to be specified)
 
-I need the documentation (later)
+- xml definition:
+
+```xml
+<?xml version='1.0' encoding='utf-8'?>
+<ARTICLES>
+    <ARTICLE_ITEM>
+        <ID>unikátní a neměnné označení příspěvku. Např: 0001</ID>
+        <PEREX>Krátký úvodník, který se zobrazuje v těle článku. Max. délka = 225 znaků</PEREX>
+        <PREVIEW>Upoutávka článku - zobrazí se ve výpisech článků jako podnadpis. Max. délka 225 znaků.</PREVIEW>
+        <TITLE>titulek, H1, meta title</TITLE>
+        <CONTENT>
+        Tělo článku. Jsou podporovány základní html tagy. Pro jejich úspěšný import je potřeba uzavřít obsah javascript paramatrem CDATA. Příklad:
+        <![CDATA[
+        for (i=0; i < 10; $++)
+        {
+            document.writeln("<p>Zde má být obsah článku, který má podporovat základní html tagy pro formátování textu.</p>
+                <h2>Test nadpisu h2</h2>
+                <p>Normální text</p>
+                <h3>Test nadpisu h3</h3>
+                <p>Normální text se seznamen 
+                <ul>
+                    <li>položka 1</li>
+                    <li>položka 2</li>
+                </ul>
+                Tady pokračuje normální text.
+                <span  style="color: red; font-size: 150 %;">Tento text nebude červený</span>.
+            </p> ");
+        }
+        ]]>
+        </CONTENT>
+        <IMGURL>URL k hlavnímu obrázku článku (ideální rozměr 300x300 px)</IMGURL>
+        <DATE_DISPLAY_FROM>DD-MM-YYYY HH:MM:SS</DATE_DISPLAY_FROM>
+        <DATE_DISPLAY_TO>DD-MM-YYYY HH:MM:SS</DATE_DISPLAY_TO>
+        <EVENT>
+            <DATE_FROM>DD-MM-YYYY HH:MM:SS</DATE_FROM>
+            <DATE_TO>DD-MM-YYYY HH:MM:SS</DATE_TO>
+            <PRICE_INFO>Např: "Vstupné 350 Kč" (informace by měla být krátká do cca 20 znaků)</PRICE_INFO>
+            <URL>odkaz směřující na online rezervaci</URL>
+            <ADDRESS>Ulice č.p., Město</ADDRESS>
+        </EVENT>
+        <PHOTOGALLERY>
+            <IMGURL>http://zdrojfoto.cz/obrazek-fotogalerie-1.jpg</IMGURL>
+            <IMGURL>http://zdrojfoto.cz/obrazek-fotogalerie-2.jpg</IMGURL>
+        </PHOTOGALLERY>
+    </ARTICLE_ITEM>
+</ARTICLES>
+```
 
 #### 4) Expose the XML file
 
@@ -166,7 +238,6 @@ TBD
 - https://github.com/paquettg/php-html-parser
 - https://github.com/zendframework/zf2
 - http://www.doctrine-project.org/projects/orm.html
-- https://github.com/ziollek/PAXB
 - http://php.net/
 
 

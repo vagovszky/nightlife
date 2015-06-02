@@ -27,5 +27,28 @@ class IndexController extends AbstractActionController {
         $console->write($result->fail, Color::RED);
         $console->write("\n");
     }
-
+    
+    public function xmlAction(){
+        
+        $dir = __DIR__."/../../../../data/xml";
+        if(!file_exists($dir)){
+            mkdir($dir, 0775, true);
+        }
+        
+        $path = $dir."/events-".date('ymdHis').".xml";
+        
+        $console = $this->getConsole();
+        if ($console instanceof Virtual) {
+            return "No console support !!!";
+        }
+        $console->writeLine("Generating XML ...");
+        
+        $xml = $this->getServiceLocator()->get('Application\Service\XmlGenerator')->getXml();
+        if(!$xml){
+            $console->writeLine("XML generator FAILED!", Color::RED);
+        }else{
+            file_put_contents($path, $xml);
+            $console->writeLine("XML generated successfully!", Color::GREEN);
+        }
+    }
 }

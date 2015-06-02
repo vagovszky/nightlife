@@ -37,7 +37,7 @@ class EventFilter extends InputFilter
                 'allow_empty' => true,
                 'filters' => array(
                     array('name' => 'StringTrim'),
-                    array('name' => 'StripTags'), // remove HTML tags
+                    //array('name' => 'StripTags'),
                     //array('name' => 'HtmlEntities', 'options' => array('quotestyle' => ENT_COMPAT)),
                 ),
                 'validators' => array(

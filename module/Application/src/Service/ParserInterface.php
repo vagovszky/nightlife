@@ -10,7 +10,7 @@ interface ParserInterface {
     
     public function setListUrl($listUrl);
     
-    public function truncateTable();
+    public function emptyTable();
     
     public function setDebugMode($debugMode = true);
     

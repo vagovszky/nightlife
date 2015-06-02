@@ -23,7 +23,7 @@ class Parser implements ParserInterface, LoggerAwareInterface, InputFilterAwareI
     
     private $debugMode = false;
     
-    const PARSER_ENTITY = 'Application\Entity\Event';
+    const ENTITY = 'Application\Entity\Event';
     
     public function __construct(EntityManagerInterface $em, Dom $dom){
         $this->em = $em;
@@ -60,7 +60,7 @@ class Parser implements ParserInterface, LoggerAwareInterface, InputFilterAwareI
     }
     
     public function parse(){
-        $this->truncateTable();
+        $this->emptyTable();
         $result = new \stdClass();
         $result->ok = 0;
         $result->fail = 0;
@@ -93,7 +93,7 @@ class Parser implements ParserInterface, LoggerAwareInterface, InputFilterAwareI
                 "place_url_detail" => $this->prepareUrl(trim($detailContent->find('.right_side .main .title .info .item')[0]->find('span a')->getAttribute('href'))),
                 "place" => trim($detailContent->find('.right_side .main .title .info .item')[0]->find('span a')->text),
                 "entry_amount" => (int) filter_var(trim($detailContent->find('.right_side .main .title .info .item')[2]->find('span')->text), FILTER_SANITIZE_NUMBER_INT),
-                "description" => trim($detailContent->find('.right_side .main .desc')->innerHtml),
+                "description" => iconv("UTF-8", "UTF-8//IGNORE", trim($detailContent->find('.right_side .main .desc')->innerHtml)),
                 "drink_list_url" => $this->prepareUrl(trim($detailContent->find('.right_side .main .foot a')->getAttribute('href'))),
                 "social_url" => $this->prepareUrl(trim($detailContent->find('.right_side .main .foot .social a')->getAttribute('href')))
             );
@@ -121,9 +121,10 @@ class Parser implements ParserInterface, LoggerAwareInterface, InputFilterAwareI
         if($inputFilter->isValid()){
             try{
                 //@TODO find better way howto return new instance of the entity
-                $entityName = self::PARSER_ENTITY;
-                $eventEntity = new $entityName; //$this->em->getRepository(self::PARSER_ENTITY);
-                $eventEntity->populate($inputFilter->getValues());
+                $entityName = self::ENTITY;
+                $eventEntity = new $entityName; //$this->em->getRepository(self::ENTITY);
+                $values = $inputFilter->getValues();
+                $eventEntity->populate($values);
                 $this->em->persist($eventEntity);
                 $this->em->flush();
             }catch(\Exception $e){
@@ -131,28 +132,26 @@ class Parser implements ParserInterface, LoggerAwareInterface, InputFilterAwareI
                 throw new ParserException('Cannot save data: '.$e->getMessage());
             }
         }else{
-            $this->logger->log(Logger::WARN, "Invalid data: ".$e->getMessage());
-            throw new ParserException('Invalid data: '.$e->getMessage());
+            $this->logger->log(Logger::WARN, "Invalid entity data");
+            throw new ParserException("Invalid entity data");
         }
     }
     
-    public function truncateTable(){
+    public function emptyTable(){
         $this->logger->log(Logger::INFO, "Truncating events table...");
-        $cmd = $this->em->getClassMetadata(self::PARSER_ENTITY);
+        $cmd = $this->em->getClassMetadata(self::ENTITY);
         $connection = $this->em->getConnection();
-        $dbPlatform = $connection->getDatabasePlatform();
         $connection->beginTransaction();
         try {
             $connection->query('SET FOREIGN_KEY_CHECKS=0');
-            $q = $dbPlatform->getTruncateTableSql($cmd->getTableName());
-            $connection->executeUpdate($q);
+            $connection->query('DELETE FROM '.$cmd->getTableName());
             $connection->query('SET FOREIGN_KEY_CHECKS=1');
             $connection->commit();
         }
         catch (\Exception $e) {
-            $this->logger->log(Logger::EMERG, "Can not truncate the events table: ".$e->getMessage());
+            $this->logger->log(Logger::EMERG, "Can not empty the events table: ".$e->getMessage());
             $connection->rollback();
-            throw new ParserException('Can not truncate the events table: '.$e->getMessage());
+            throw new ParserException('Can not empty the events table: '.$e->getMessage());
         }
     }
     
