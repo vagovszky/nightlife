@@ -10,3 +10,4 @@ composer.lock
 console.phar
 /bin/nlp.phar
 /vendor/
+/data/xml/

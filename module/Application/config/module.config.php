@@ -61,7 +61,7 @@ return array(
     'parser' => array(
         'sources' => array(
             'baseUrl' => 'http://www.the-night-life.cz',
-            'listUrl' => 'http://www.the-night-life.cz/udalosti?filter[city]=Brno&count=10'
+            'listUrl' => 'http://www.the-night-life.cz/udalosti?filter[city]=Brno&count=20'
         ),
         'debugMode' => false,
     ),

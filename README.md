@@ -144,30 +144,28 @@ Note: All the code will be programmed in PHP
 - Table columns:
 
 ```sql
+
 CREATE TABLE `event` (
-  id int(11) NOT NULL AUTO_INCREMENT,
-  url varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  title varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  description text COLLATE utf8_unicode_ci,
-  img_big_url varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  img_url varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  email varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
-  url_web varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  phone varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
-  map_iframe_url text COLLATE utf8_unicode_ci,
-  place_url_detail varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  place varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  id varchar(32) NOT NULL,
+  url varchar(255) DEFAULT NULL,
+  title varchar(255) DEFAULT NULL,
+  description text,
+  img_big_url varchar(255) DEFAULT NULL,
+  img_url varchar(255) DEFAULT NULL,
+  email varchar(100) DEFAULT NULL,
+  url_web varchar(255) DEFAULT NULL,
+  phone varchar(50) DEFAULT NULL,
+  map_iframe_url text,
+  place_url_detail varchar(255) DEFAULT NULL,
+  place varchar(255) DEFAULT NULL,
   entry_amount int(11) DEFAULT NULL,
-  drink_list_url varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  social_url varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `date` date DEFAULT NULL,
-  `time` time DEFAULT NULL,
-  street varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  city varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
-  PRIMARY KEY (id),
-  KEY idx_url (url),
-  KEY idx_title (title)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+  drink_list_url varchar(255) DEFAULT NULL,
+  social_url varchar(255) DEFAULT NULL,
+  date date DEFAULT NULL,
+  time time DEFAULT NULL,
+  street varchar(255) DEFAULT NULL,
+  city varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 ```
 
 #### 3) Populate a XML (to be specified)

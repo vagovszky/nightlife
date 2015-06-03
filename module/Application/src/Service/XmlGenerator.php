@@ -42,7 +42,7 @@ class XmlGenerator implements XmlGeneratorInterface, LoggerAwareInterface {
                 break;
             }
             ++$last_part;
-            if ( $part[strlen($part)-1] == '.' ){
+            if ((strlen($part) > 0) && ($part[strlen($part)-1] == '.' )){
                 $last_taken = $last_part;
             }
         }
@@ -76,7 +76,8 @@ class XmlGenerator implements XmlGeneratorInterface, LoggerAwareInterface {
                         $writer->writeElement('DATE_FROM', $datetimeEvent);
                         $writer->writeElement('DATE_TO', !empty($entity->getDate()) ? $entity->getDate()->format('d-m-Y')." 23:59:59" : "");
                         $writer->writeElement('PRICE_INFO', (!empty($entity->getEntryAmount()) ? $entity->getEntryAmount() : "0") . " Kč");
-                        $writer->writeElement('URL', !empty($entity->getUrlWeb()) ? $entity->getUrlWeb() : "");
+                        //$writer->writeElement('URL', !empty($entity->getUrlWeb()) ? $entity->getUrlWeb() : "");
+                        $writer->writeElement('URL', "");
                         $address = (!empty($entity->getStreet()) ? $entity->getStreet() . ", " : "") . (!empty($entity->getCity()) ? $entity->getCity() : "");
                         $writer->writeElement('ADDRESS', $address);
                     $writer->endElement();

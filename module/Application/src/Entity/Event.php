@@ -15,9 +15,8 @@ class Event
     /**
      * @var integer
      *
-     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Column(name="id", type="string", length=32, nullable=false)
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $id;
 
@@ -148,17 +147,29 @@ class Event
     private $city;
 
 
-
+    /**
+     * Set id
+     *
+     * @param string $id
+     * @return integer
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+        return $this;
+    }
+    
     /**
      * Get id
      *
-     * @return integer
+     * @return Event
      */
     public function getId()
     {
         return $this->id;
     }
-
+    
+    
     /**
      * Set url
      *
@@ -607,6 +618,11 @@ class Event
      * 
      */
     public function populate(array $array){
+        if(empty($array["id"])){
+            throw new \Exception("Event entity: id must be defined!");
+        }else{
+            $this->setId($array['id']);
+        }
         if(!empty($array["url"])) $this->setUrl($array["url"]);
         if(!empty($array["title"])) $this->setTitle($array["title"]);
         if(!empty($array["description"])) $this->setDescription($array["description"]);

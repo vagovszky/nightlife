@@ -82,6 +82,7 @@ class Parser implements ParserInterface, LoggerAwareInterface, InputFilterAwareI
             // The Map - the core of whole parser
             $detailContent = $this->dom->find('body .site_wrap #site_content .content_subpage .detail .part_head');
             $event = array(
+                "id" => md5(trim($url)),
                 "url" => trim($url),
                 "img_big_url" => $this->prepareUrl(trim($detailContent->find('.left_side .image a')->getAttribute('href'))),
                 "img_url" => $this->prepareUrl(trim($detailContent->find('.left_side .image a img')->getAttribute('src'))),

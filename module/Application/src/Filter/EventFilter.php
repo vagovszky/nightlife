@@ -6,6 +6,19 @@ class EventFilter extends InputFilter
 {
     public function init()
     {
+        // id
+        $this->add(array(
+                'name' => 'id',
+                'required' => false,
+                'allow_empty' => true,
+                'filters' => array(
+                    array('name' => 'StringTrim'),
+                    array('name' => 'Alnum'),
+                ),
+                'validators' => array(
+                    array( 'name' => 'StringLength', 'options' => array('max' => 32),
+                ),
+        )));
         // url
         $this->add(array(
                 'name' => 'url',
