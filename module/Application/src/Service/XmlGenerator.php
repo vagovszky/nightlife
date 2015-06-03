@@ -29,24 +29,22 @@ class XmlGenerator implements XmlGeneratorInterface, LoggerAwareInterface {
         return $this->xmlWriter;
     }
     
-    private function tokenTruncate($html, $your_desired_width) {
-        $string = strip_tags($html);
-        $parts = preg_split('/([\s\n\r]+)/', $string, null, PREG_SPLIT_DELIM_CAPTURE);
-        $parts_count = count($parts);
-        $length = 0;
-        $last_part = 0;
-        $last_taken = 0;
-        foreach($parts as $part){
-            $length += strlen($part);
-            if ( $length > $your_desired_width ){
-                break;
-            }
-            ++$last_part;
-            if ((strlen($part) > 0) && ($part[strlen($part)-1] == '.' )){
-                $last_taken = $last_part;
+    private function createPerex($html, $limit = 255, $terminator = '...'){
+        $text = strip_tags($html);
+        if (mb_strlen($text) <= $limit) {
+            return $text;
+        } else {
+            if(mb_strlen($text) > ($limit - strlen($terminator))){
+                $text = mb_substr($text, 0, $limit - strlen($terminator));
+                $pos = mb_strrpos($text, ".");
+                if($pos === false){
+                    $pos = mb_strrpos($text, " ");
+                }
+                return mb_substr($text, 0, ($pos ? $pos : 0)) . $terminator;
+            }else{
+                return $text;
             }
         }
-        return implode(array_slice($parts, 0, $last_taken));
     }
     
     public function getXML() {
@@ -59,7 +57,7 @@ class XmlGenerator implements XmlGeneratorInterface, LoggerAwareInterface {
             $writer->startElement('ARTICLES');
             foreach($this->em->getRepository(self::ENTITY)->findAll() as $entity){
                 $this->logger->log(Logger::INFO, "Generate ARTICLE_ITEM for url: " . $entity->getUrl());
-                $perex = $this->tokenTruncate($entity->getDescription(), 255);
+                $perex = $this->createPerex($entity->getDescription(), 255);
                 $writer->startElement('ARTICLE_ITEM');
                     $writer->writeElement('ID', $entity->getId());
                     $writer->writeElement('PEREX', $perex);

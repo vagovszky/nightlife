@@ -84,23 +84,23 @@ class Parser implements ParserInterface, LoggerAwareInterface, InputFilterAwareI
             $event = array(
                 "id" => md5(trim($url)),
                 "url" => trim($url),
-                "img_big_url" => $this->prepareUrl(trim($detailContent->find('.left_side .image a')->getAttribute('href'))),
-                "img_url" => $this->prepareUrl(trim($detailContent->find('.left_side .image a img')->getAttribute('src'))),
-                "title" => trim($detailContent->find('.right_side .main .title h1')->text),
-                "email" => trim($detailContent->find('.left_side .contact .left_s .email')->text),
-                "url_web" => $this->prepareUrl(trim($detailContent->find('.left_side .contact .left_s .web a')->getAttribute('href'))),
-                "phone" => trim($detailContent->find('.left_side .contact .right_s .phone')->text),
-                "map_iframe_url" => $this->prepareUrl(trim($detailContent->find('.left_side .map iframe')->getAttribute('src'))),
-                "place_url_detail" => $this->prepareUrl(trim($detailContent->find('.right_side .main .title .info .item')[0]->find('span a')->getAttribute('href'))),
-                "place" => trim($detailContent->find('.right_side .main .title .info .item')[0]->find('span a')->text),
-                "entry_amount" => (int) filter_var(trim($detailContent->find('.right_side .main .title .info .item')[2]->find('span')->text), FILTER_SANITIZE_NUMBER_INT),
-                "description" => iconv("UTF-8", "UTF-8//IGNORE", trim($detailContent->find('.right_side .main .desc')->innerHtml)),
-                "drink_list_url" => $this->prepareUrl(trim($detailContent->find('.right_side .main .foot a')->getAttribute('href'))),
-                "social_url" => $this->prepareUrl(trim($detailContent->find('.right_side .main .foot .social a')->getAttribute('href')))
+                "img_big_url" => $this->prepareUrl($this->escapeString($detailContent->find('.left_side .image a')->getAttribute('href'))),
+                "img_url" => $this->prepareUrl($this->escapeString($detailContent->find('.left_side .image a img')->getAttribute('src'))),
+                "title" => $this->escapeString($detailContent->find('.right_side .main .title h1')->text),
+                "email" => $this->escapeString($detailContent->find('.left_side .contact .left_s .email')->text),
+                "url_web" => $this->prepareUrl($this->escapeString($detailContent->find('.left_side .contact .left_s .web a')->getAttribute('href'))),
+                "phone" => $this->escapeString($detailContent->find('.left_side .contact .right_s .phone')->text),
+                "map_iframe_url" => $this->prepareUrl($this->escapeString($detailContent->find('.left_side .map iframe')->getAttribute('src'))),
+                "place_url_detail" => $this->prepareUrl($this->escapeString($detailContent->find('.right_side .main .title .info .item')[0]->find('span a')->getAttribute('href'))),
+                "place" => $this->escapeString($detailContent->find('.right_side .main .title .info .item')[0]->find('span a')->text),
+                "entry_amount" => (int) filter_var($this->escapeString($detailContent->find('.right_side .main .title .info .item')[2]->find('span')->text), FILTER_SANITIZE_NUMBER_INT),
+                "description" => $this->escapeString($detailContent->find('.right_side .main .desc')->innerHtml),
+                "drink_list_url" => $this->prepareUrl($this->escapeString($detailContent->find('.right_side .main .foot a')->getAttribute('href'))),
+                "social_url" => $this->prepareUrl($this->escapeString($detailContent->find('.right_side .main .foot .social a')->getAttribute('href')))
             );
             
-            $datetime = preg_split('/(<br[^>]*>){1,2}/i', trim($detailContent->find('.right_side .main .title .info .item')[1]->find('span')->innerHtml)); // date + time
-            $address = preg_split('/(<br[^>]*>){1,2}/i', trim($detailContent->find('.left_side .contact .left_s .address')->innerHtml)); // street + city
+            $datetime = preg_split('/(<br[^>]*>){1,2}/i', $this->escapeString($detailContent->find('.right_side .main .title .info .item')[1]->find('span')->innerHtml)); // date + time
+            $address = preg_split('/(<br[^>]*>){1,2}/i', $this->escapeString($detailContent->find('.left_side .contact .left_s .address')->innerHtml)); // street + city
             
             $event["date"] = (isset($datetime[0])) ? \DateTime::createFromFormat('d/m/Y',trim($datetime[0]))->format("Y-m-d") : '';
             $event["time"] = (isset($datetime[1])) ? \DateTime::createFromFormat('H:i', trim($datetime[1]))->format("H:i:s") : '';
@@ -185,6 +185,10 @@ class Parser implements ParserInterface, LoggerAwareInterface, InputFilterAwareI
         }else{
             return $decodedUrl;
         }
+    }
+    
+    private function escapeString($string){
+        return iconv("UTF-8", "UTF-8//IGNORE", trim($string));
     }
     
 }
