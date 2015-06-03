@@ -18,4 +18,17 @@ return array(
             )
         ),
     ),
+    'mail' => array(
+        'transport' => array(
+            'options' => array(
+                'host'              => 'smtp.gmail.com',
+                'connection_class'  => 'login',
+                'connection_config' => array(
+                    'username' => 'example@example.org',
+                    'password' => '',
+                    'ssl' => 'tls'
+                ),
+            ),  
+        ),
+    ),
 );

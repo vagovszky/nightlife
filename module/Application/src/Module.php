@@ -23,7 +23,8 @@ class Module implements ConfigProviderInterface, ConsoleUsageProviderInterface, 
     public function getConsoleUsage(Console $console) {
         return array(
             "parse" => "Save to database",
-            "xml"   => "Generate XML"
+            "xml"   => "Generate XML",
+            "mail"   => "Send email"
         );
     }
 }

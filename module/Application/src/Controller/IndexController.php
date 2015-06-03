@@ -35,7 +35,7 @@ class IndexController extends AbstractActionController {
             mkdir($dir, 0775, true);
         }
         
-        $path = $dir."/events-".date('ymdHis').".xml";
+        $path = $dir."/events.xml";
         
         $console = $this->getConsole();
         if ($console instanceof Virtual) {
@@ -50,5 +50,29 @@ class IndexController extends AbstractActionController {
             file_put_contents($path, $xml);
             $console->writeLine("XML generated successfully!", Color::GREEN);
         }
+    }
+    
+    public function mailAction(){
+        $message = new \Zend\Mail\Message();
+
+        $message->setBody('This is the body');
+        $message->setFrom('myemail@mydomain.com');
+        $message->addTo('myemail@mydomain.com');
+        $message->setSubject('Test subject');
+
+        $smtpOptions = new \Zend\Mail\Transport\SmtpOptions();
+
+        $smtpOptions->setHost('smtp.gmail.com')
+            ->setConnectionClass('login')
+              ->setName('smtp.gmail.com')
+            ->setConnectionConfig(array(
+                               'username' => 'cf8qde01@gmail.com',
+                               'password' => '',
+                               'ssl' => 'tls',
+                             )
+                  );
+
+        $transport = new \Zend\Mail\Transport\Smtp($smtpOptions);
+        $transport->send($message);
     }
 }

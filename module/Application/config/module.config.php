@@ -28,6 +28,15 @@ return array(
                         )
                     )
                 ),
+                'mail' => array(
+                    'options' => array(
+                        'route' => 'mail',
+                        'defaults' => array(
+                            'controller' => 'Application\Controller\Index',
+                            'action' => 'mail'
+                        )
+                    )
+                ),
             )
         )
     ),
