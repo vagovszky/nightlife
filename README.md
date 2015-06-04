@@ -5,11 +5,12 @@
 1. Download & parse the html content **(completed)**
 2. Store parsed data to DB (optional) **(completed)**
 3. Populate a XML (to be specified) **(completed)**
-4. Expose the XML file
+4. Expose the XML file **(completed)**
 5. Usage, tuning, deployment, terms of use
 
 For deployment we are going to use phar archive (whole project in one file)
 - **bin/create_phar.php**
+- Note: Some problems occured with standalone phar
 
 Note: All the code will be programmed in PHP
 
@@ -220,7 +221,7 @@ CREATE TABLE `event` (
 
 #### 4) Expose the XML file
 
-TBD
+- via Email (XML as attachment)
 
 #### 5) Usage, tuning, deployment, terms of use
 

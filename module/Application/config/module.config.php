@@ -61,7 +61,8 @@ return array(
         ),
         'factories' => array(
             'Application\Service\Parser' => 'Application\Factory\ParserFactory',
-            'Application\Service\XmlGenerator' => 'Application\Factory\XmlGeneratorFactory'
+            'Application\Service\XmlGenerator' => 'Application\Factory\XmlGeneratorFactory',
+            'Application\Service\Mailer' => 'Application\Factory\MailerFactory'
         ),
         'abstract_factories' => array(
             'Zend\Log\LoggerAbstractServiceFactory',
@@ -73,6 +74,9 @@ return array(
             'listUrl' => 'http://www.the-night-life.cz/udalosti?filter[city]=Brno&count=20'
         ),
         'debugMode' => false,
+    ),
+    'mailer' => array(
+        'recipients' => array('vagovszky@gmail.com'),
     ),
     'log' => array(
         'Application\Logger' => array(

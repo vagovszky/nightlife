@@ -11,6 +11,14 @@ class IndexController extends AbstractActionController {
         return $this->getServiceLocator()->get('console');
     }
     
+    public function getXmlPath(){
+        $dir = __DIR__."/../../../../data/xml";
+        if(!file_exists($dir)){
+            mkdir($dir, 0775, true);
+        }
+        return $dir."/events.xml";
+    }
+    
     public function parseAction(){
         $console = $this->getConsole();
         if ($console instanceof Virtual) {
@@ -29,15 +37,9 @@ class IndexController extends AbstractActionController {
     }
     
     public function xmlAction(){
-        
-        $dir = __DIR__."/../../../../data/xml";
-        if(!file_exists($dir)){
-            mkdir($dir, 0775, true);
-        }
-        
-        $path = $dir."/events.xml";
-        
+        $path = $this->getXmlPath();
         $console = $this->getConsole();
+
         if ($console instanceof Virtual) {
             return "No console support !!!";
         }
@@ -53,26 +55,19 @@ class IndexController extends AbstractActionController {
     }
     
     public function mailAction(){
-        $message = new \Zend\Mail\Message();
-
-        $message->setBody('This is the body');
-        $message->setFrom('myemail@mydomain.com');
-        $message->addTo('myemail@mydomain.com');
-        $message->setSubject('Test subject');
-
-        $smtpOptions = new \Zend\Mail\Transport\SmtpOptions();
-
-        $smtpOptions->setHost('smtp.gmail.com')
-            ->setConnectionClass('login')
-              ->setName('smtp.gmail.com')
-            ->setConnectionConfig(array(
-                               'username' => 'cf8qde01@gmail.com',
-                               'password' => '',
-                               'ssl' => 'tls',
-                             )
-                  );
-
-        $transport = new \Zend\Mail\Transport\Smtp($smtpOptions);
-        $transport->send($message);
+        $console = $this->getConsole();
+        if ($console instanceof Virtual) {
+            return "No console support !!!";
+        }
+        $console->writeLine("Sending email!");
+        
+        $mailer = $this->getServiceLocator()->get('Application\Service\Mailer');
+        $mailer->setXmlPath($this->getXmlPath());
+        
+        if($mailer->send()){
+            $console->writeLine("Mail sent.", Color::GREEN);
+        }else{
+            $console->writeLine("Mail send ERROR!", Color::RED);
+        }
     }
 }
