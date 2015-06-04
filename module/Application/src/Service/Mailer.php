@@ -68,13 +68,10 @@ class Mailer implements MailerInterface, LoggerAwareInterface {
         $text = new MimePart("This is automaticaly generated message.");
         $text->type = "text/plain";
         
-        $html = new MimePart("<p>This is automaticaly generated message.</p>");
-        $html->type = "text/html";
-
         $xml = $this->prepareAttachment();
                 
         $body = new MimeMessage();
-        $body->setParts(array($text, $html, $xml));
+        $body->setParts(array($text, $xml));
 
         return $body;
     }
