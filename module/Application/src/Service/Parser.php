@@ -144,9 +144,9 @@ class Parser implements ParserInterface, LoggerAwareInterface, InputFilterAwareI
         $connection = $this->em->getConnection();
         $connection->beginTransaction();
         try {
-            $connection->query('SET FOREIGN_KEY_CHECKS=0');
+            //$connection->query('SET FOREIGN_KEY_CHECKS=0');
             $connection->query('DELETE FROM '.$cmd->getTableName());
-            $connection->query('SET FOREIGN_KEY_CHECKS=1');
+            //$connection->query('SET FOREIGN_KEY_CHECKS=1');
             $connection->commit();
         }
         catch (\Exception $e) {
